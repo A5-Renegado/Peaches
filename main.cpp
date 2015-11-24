@@ -2,8 +2,7 @@
 
 int main(int argc, char* argv[])
 {
-	std::cout << "Start" << std::endl;
-	Peaches_Main peach = Peaches_Main(true);
-	int i = peach.execute();
+	Peaches_Main *peach = new Peaches_Main(true);
+	int i = peach->execute();
 	return 0;
 }
