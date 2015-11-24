@@ -5,7 +5,7 @@ int Peaches_Main::execute()
 	std::string test;
 	int end = 0;
 
-	if (!image_processing.initKinect()) return 0;
+	if (!image_processing->initKinect()) return 0;
 
 	while (execution)
 	{
@@ -21,7 +21,7 @@ int Peaches_Main::execute()
 			std::cin >> test;
 		}
 		counter++;
-		image_processing.setCounter(counter);
+		image_processing->setCounter(counter);
 	}
 	return 1;
 }
@@ -39,18 +39,18 @@ void Peaches_Main::set_debug_mode(bool debug)
 Peaches_Main::Peaches_Main(bool debug)
 {
 	debug_mode = debug;
-	image_processing = Kinect_ImProc(debug);
+	image_processing = new Kinect_ImProc(debug);
 	counter = 0;
 	execution = true;
 }
 
 int Peaches_Main::main_loop()
 {
-	image_processing.getKinectData();
-	bool peaches = image_processing.checkImage();
+	image_processing->getKinectData();
+	bool peaches = image_processing->checkImage();
 	if (debug_mode)
 	{
-		image_processing.debug_print();
+		image_processing->debug_print();
 	}
 	return 0;
 }
