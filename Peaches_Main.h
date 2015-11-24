@@ -13,5 +13,5 @@ private:
 	int main_loop();
 	int counter;
 	bool execution;
-	Kinect_ImProc image_processing;
+	Kinect_ImProc *image_processing;
 };
