@@ -19,6 +19,7 @@ extern "C" {
 #define height 480
 #define GL_BGRA 0x80E1
 
+//YOLO
 //OpenGL Variables
 GLuint textureId;
 GLubyte data[width*height * 4];
