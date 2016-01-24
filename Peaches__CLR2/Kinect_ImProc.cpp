@@ -3,6 +3,7 @@
 
 //extern "C" HRESULT __stdcall NuiGetSensorCount(int* pCount);
 
+
 Kinect_ImProc::Kinect_ImProc()
 {
 	debug_mode = false;
@@ -31,6 +32,11 @@ Kinect_ImProc::Kinect_ImProc(bool debug)
 	//bluemax = 0.7882353;
 	bluemax = 200.0/255.0;
 	position = new ThreeDPos();
+}
+
+bool Kinect_ImProc::check_debug()
+{
+	return debug_mode;
 }
 
 bool Kinect_ImProc::initKinect()
@@ -76,7 +82,7 @@ bool Kinect_ImProc::initKinect()
 	return sensor;
 }
 
-void Kinect_ImProc::getRgbData(GLubyte* dest)
+void Kinect_ImProc::getRgbData(GLubyte* dest, GLubyte* dest2)
 {
 	NUI_IMAGE_FRAME imageFrame;
 	NUI_LOCKED_RECT LockedRect;
@@ -92,6 +98,8 @@ void Kinect_ImProc::getRgbData(GLubyte* dest)
 	{
 		std::cout << "Doing stuff" << std::endl;
 		const BYTE* start = (const BYTE*)LockedRect.pBits;
+		const BYTE* curr = (const BYTE*)LockedRect.pBits;
+		const BYTE* dataEnd = curr + (width*height) * 4;
 		float* fdest = (float*)dest;
 		long* depth2rgb = (long*)depthToRgbMap;
 		for (int j = 0; j < height; ++j)
@@ -115,6 +123,10 @@ void Kinect_ImProc::getRgbData(GLubyte* dest)
 					}
 				}
 			}
+		}
+		while (curr < dataEnd)
+		{
+			*dest2++ = *curr++;
 		}
 	}
 	texture->UnlockRect(0);
@@ -170,7 +182,8 @@ void Kinect_ImProc::getDepthData(GLubyte* dest)
 void Kinect_ImProc::getKinectData()
 {
 	getDepthData((GLubyte*)vertexarray);
-	getRgbData((GLubyte*)colorarray);
+	getRgbData((GLubyte*)colorarray, data);
+	//data = (GLubyte*)colorarray;
 }
 
 void Kinect_ImProc::setCounter(int count)

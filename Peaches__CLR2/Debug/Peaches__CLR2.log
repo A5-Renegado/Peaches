@@ -1,4 +1,4 @@
-﻿Build started 2016-01-13 10:04:43 AM.
+﻿Build started 2016-01-23 7:38:34 PM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
@@ -6,11 +6,13 @@
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Kinect_ImProc.cpp Peaches_Main.cpp Peaches__CLR2.cpp ThreeDPos.cpp
          AssemblyInfo.cpp
          Kinect_ImProc.cpp
-     1>Kinect_ImProc.cpp(76): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
-     1>Kinect_ImProc.cpp(226): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>Kinect_ImProc.cpp(82): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
+     1>Kinect_ImProc.cpp(239): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>Kinect_ImProc.cpp(295): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
+     1>Kinect_ImProc.cpp(308): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
          Peaches_Main.cpp
+     1>Peaches_Main.cpp(33): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\string.h(552): note: see declaration of 'strdup'
          Peaches__CLR2.cpp
          ThreeDPos.cpp
          Generating Code...
@@ -36,7 +38,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmpd92f57ec99bd47b89e13da2e1cea62d6.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp6f4e2b2dbc46479fbeaf68205127634a.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -47,6 +49,12 @@
          Processed /DEFAULTLIB:MSVCMRTD
          Processed /DEFAULTLIB:MSCOREE
          Processed /DEFAULTLIB:uuid.lib
+         Processed /DEFAULTLIB:freeglut.lib
+         Processed /DEFAULTLIB:glu32.lib
+         Processed /DEFAULTLIB:opengl32.lib
+         Processed /DEFAULTLIB:gdi32.lib
+         Processed /DEFAULTLIB:winmm.lib
+         Processed /DEFAULTLIB:user32.lib
          Processed /DEFAULTLIB:msvcprtd
          
          Searching libraries
@@ -54,6 +62,7 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCRTD.lib:
                Found __fltused
                  Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
                  Referenced in ThreeDPos.obj
                  Loaded MSVCRTD.lib(fltused.obj)
                Found "const type_info::`vftable'" (??_7type_info@@6B@)
@@ -166,6 +175,12 @@
                  Loaded MSVCMRTD.lib(matherr.obj)
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
                Found "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::showmanyc(void)" (?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JXZ)
                  Referenced in Kinect_ImProc.obj
@@ -288,6 +303,9 @@
                Found ___stdio_common_vfprintf
                  Referenced in Kinect_ImProc.obj
                  Loaded ucrtd.lib(ucrtbased.dll)
+               Found _exit
+                 Referenced in Peaches_Main.obj
+                 Loaded ucrtd.lib(ucrtbased.dll)
                Found __wmakepath_s
                  Referenced in MSVCRTD.lib(_pdblkup_.obj)
                  Loaded ucrtd.lib(ucrtbased.dll)
@@ -304,6 +322,7 @@
                  Referenced in MSVCMRTD.lib(ManagedMain.obj)
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found __IMPORT_DESCRIPTOR_ucrtbased
+                 Referenced in ucrtd.lib(ucrtbased.dll)
                  Referenced in ucrtd.lib(ucrtbased.dll)
                  Referenced in ucrtd.lib(ucrtbased.dll)
                  Referenced in ucrtd.lib(ucrtbased.dll)
@@ -350,6 +369,12 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
                Found __imp__GetStartupInfoW@4
@@ -429,6 +454,12 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
@@ -447,6 +478,12 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
@@ -578,6 +615,31 @@
          Search transition ?fsetpos@@$$J0YAHPAU_iobuf@@PB_J@Z->_fsetpos
          Search transition ?setvbuf@@$$J0YAHPAU_iobuf@@PADHI@Z->_setvbuf
          Search transition ?fflush@@$$J0YAHPAU_iobuf@@@Z->_fflush
+         Search transition ?__glutInitWithExit@@$$J212YGXPAHPAPADP6AXH@Z@Z->___glutInitWithExit@12
+         Search transition ?__glutCreateWindowWithExit@@$$J18YGHPBDP6AXH@Z@Z->___glutCreateWindowWithExit@8
+         Search transition ?glTexSubImage2D@@$$J236YGXIHHHHHIIPBX@Z->_glTexSubImage2D@36
+         Search transition ?glClear@@$$J14YGXI@Z->_glClear@4
+         Search transition ?glBegin@@$$J14YGXI@Z->_glBegin@4
+         Search transition ?glTexCoord2f@@$$J18YGXMM@Z->_glTexCoord2f@8
+         Search transition ?glVertex3f@@$$J212YGXMMM@Z->_glVertex3f@12
+         Search transition ?glEnd@@$$J10YGXXZ->_glEnd@0
+         Search transition ?glGenTextures@@$$J18YGXHPAI@Z->_glGenTextures@8
+         Search transition ?glBindTexture@@$$J18YGXII@Z->_glBindTexture@8
+         Search transition ?glTexParameteri@@$$J212YGXIIH@Z->_glTexParameteri@12
+         Search transition ?glTexImage2D@@$$J236YGXIHHHHHIIPBX@Z->_glTexImage2D@36
+         Search transition ?glClearColor@@$$J216YGXMMMM@Z->_glClearColor@16
+         Search transition ?glClearDepth@@$$J18YGXN@Z->_glClearDepth@8
+         Search transition ?glEnable@@$$J14YGXI@Z->_glEnable@4
+         Search transition ?glViewport@@$$J216YGXHHHH@Z->_glViewport@16
+         Search transition ?glMatrixMode@@$$J14YGXI@Z->_glMatrixMode@4
+         Search transition ?glLoadIdentity@@$$J10YGXXZ->_glLoadIdentity@0
+         Search transition ?glOrtho@@$$J248YGXNNNNNN@Z->_glOrtho@48
+         Search transition ?strdup@@$$J0YAPADPBD@Z->_strdup
+         Search transition ?glutInitDisplayMode@@$$J14YGXI@Z->_glutInitDisplayMode@4
+         Search transition ?glutInitWindowSize@@$$J18YGXHH@Z->_glutInitWindowSize@8
+         Search transition ?glutDisplayFunc@@$$J14YGXP6AXXZ@Z->_glutDisplayFunc@4
+         Search transition ?glutIdleFunc@@$$J14YGXP6AXXZ@Z->_glutIdleFunc@4
+         Search transition ?glutMainLoop@@$$J10YGXXZ->_glutMainLoop@0
          Search transition ??_Etype_info@@UAEPAXI@Z->__t2m@??_Etype_info@@UAEPAXI@Z
          Search transition ??_Ebad_alloc@std@@UAEPAXI@Z->__t2m@??_Ebad_alloc@std@@UAEPAXI@Z
          Search transition ??_Ebad_array_new_length@std@@UAEPAXI@Z->__t2m@??_Ebad_array_new_length@std@@UAEPAXI@Z
@@ -640,9 +702,99 @@
                  Referenced in MSVCRTD.lib(delete_array_size.obj)
                  Loaded MSVCRTD.lib(delete_array.obj)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib:
+               Found _strdup
+                 Loaded OLDNAMES.lib(strdup.obj)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+               Found ___glutInitWithExit@12
+                 Loaded freeglut.lib(freeglut.dll)
+               Found ___glutCreateWindowWithExit@8
+                 Loaded freeglut.lib(freeglut.dll)
+               Found _glutInitDisplayMode@4
+                 Loaded freeglut.lib(freeglut.dll)
+               Found _glutInitWindowSize@8
+                 Loaded freeglut.lib(freeglut.dll)
+               Found _glutDisplayFunc@4
+                 Loaded freeglut.lib(freeglut.dll)
+               Found _glutIdleFunc@4
+                 Loaded freeglut.lib(freeglut.dll)
+               Found _glutMainLoop@0
+                 Loaded freeglut.lib(freeglut.dll)
+               Found __IMPORT_DESCRIPTOR_freeglut
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Loaded freeglut.lib(freeglut.dll)
+               Found freeglut_NULL_THUNK_DATA
+                 Referenced in freeglut.lib(freeglut.dll)
+                 Loaded freeglut.lib(freeglut.dll)
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+               Found _glTexSubImage2D@36
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glClear@4
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glBegin@4
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glTexCoord2f@8
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glVertex3f@12
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glEnd@0
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glGenTextures@8
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glBindTexture@8
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glTexParameteri@12
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glTexImage2D@36
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glClearColor@16
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glClearDepth@8
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glEnable@4
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glViewport@16
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glMatrixMode@4
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glLoadIdentity@0
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found _glOrtho@48
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found __IMPORT_DESCRIPTOR_OPENGL32
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Loaded opengl32.lib(OPENGL32.dll)
+               Found OPENGL32_NULL_THUNK_DATA
+                 Referenced in opengl32.lib(OPENGL32.dll)
+                 Loaded opengl32.lib(OPENGL32.dll)
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
                Found "void __cdecl __ExceptionPtrDestroy(void *)" (?__ExceptionPtrDestroy@@YAXPAX@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
@@ -852,6 +1004,9 @@
                Found _malloc
                  Referenced in MSVCRTD.lib(new_scalar.obj)
                  Loaded ucrtd.lib(ucrtbased.dll)
+               Found __strdup
+                 Referenced in OLDNAMES.lib(strdup.obj)
+                 Loaded ucrtd.lib(ucrtbased.dll)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\vcruntimed.lib:
                Found _memcpy
                  Loaded vcruntimed.lib(VCRUNTIME140D.dll)
@@ -870,6 +1025,13 @@
                Found ___FrameUnwindFilter
                  Loaded vcruntimed.lib(VCRUNTIME140D.dll)
              Searching Kinect10.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCRTD.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
          
          Finished searching libraries
          Search transition ??_Etype_info@@UAEPAXI@Z->__t2m@??_Etype_info@@UAEPAXI@Z
@@ -904,6 +1066,12 @@
                  Referenced in MSCOREE.lib(mscoree.dll)
                  Loaded MSCOREE.lib(mscoree.dll)
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
@@ -925,6 +1093,12 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\freeglut.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\opengl32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
@@ -937,27 +1111,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{ACCD2651-BAD0-4440-8374-02DCE64818CA}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{8A7376BB-98A8-4255-A14F-46AF55EBFD85}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{8630D5BC-D95E-4F54-90A1-CD8DA4B9DD47}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{3FAE0BDA-C12C-44E3-8583-E1899375D064}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{ACCD2651-BAD0-4440-8374-02DCE64818CA}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{8630D5BC-D95E-4F54-90A1-CD8DA4B9DD47}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{8A7376BB-98A8-4255-A14F-46AF55EBFD85}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{3FAE0BDA-C12C-44E3-8583-E1899375D064}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{67D5CD87-96F7-40C7-AA12-D63095AE1ECD}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{7FBBD48D-2D58-4840-A702-B6463E60805C}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{ACCD2651-BAD0-4440-8374-02DCE64818CA}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{8630D5BC-D95E-4F54-90A1-CD8DA4B9DD47}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -974,8 +1148,11 @@
          adding resource. type:MANIFEST, name:1, language:0x0409, flags:0x30, size:381
          
          Unused libraries:
-           C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib
            C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib
+           C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\glu32.lib
+           C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib
+           C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib
+           C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib
          
          Starting pass 2
               app.res
@@ -1017,6 +1194,7 @@
               MSVCRTD.lib(utility.obj)
               MSVCRTD.lib(ucrt_stubs.obj)
               MSVCRTD.lib(utility_desktop.obj)
+              OLDNAMES.lib(strdup.obj)
               MSVCMRTD.lib(argv_mode.obj)
               MSVCMRTD.lib(commit_mode.obj)
               MSVCMRTD.lib(file_mode.obj)
@@ -1033,6 +1211,34 @@
               MSCOREE.lib(mscoree.dll)
               MSCOREE.lib(mscoree.dll)
               MSCOREE.lib(mscoree.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              freeglut.lib(freeglut.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
+              opengl32.lib(OPENGL32.dll)
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
@@ -1133,6 +1339,8 @@
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
+              ucrtd.lib(ucrtbased.dll)
+              ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
@@ -1206,4 +1414,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.71
+Time Elapsed 00:00:04.31
