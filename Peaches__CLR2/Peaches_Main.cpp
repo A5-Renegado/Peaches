@@ -8,7 +8,17 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 {
 	std::string test;
 	int end = 0;
-	if (!image_processing->initKinect()) return 0;
+	
+	char *myargv[1];
+	int myargc = 1;
+	myargv[0] = strdup("Peaches__CLR2");
+	glutInit(&myargc, myargv);
+	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
+	glutInitWindowSize(width, height);
+	glutCreateWindow("Peaches");
+	glutDisplayFunc(draw);
+	glutIdleFunc(draw);
+
 	glGenTextures(1, &image_processing->textureId);
 	glBindTexture(GL_TEXTURE_2D, image_processing->textureId);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -24,15 +34,9 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 	glOrtho(0, width, height, 0, 1, -1);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	char *myargv[1];
-	int myargc = 1;
-	myargv[0] = strdup("Peaches__CLR2");
-	glutInit(&myargc, myargv);
-	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowSize(width, height);
-	glutCreateWindow("Peaches");
-	glutDisplayFunc(draw);
-	glutIdleFunc(draw);
+	
+
+	if (!image_processing->initKinect()) return 0;
 
 	//while (execution)
 	//{
@@ -102,6 +106,7 @@ int Peaches_Main::main_pub()
 
 void draw()
 {
+	
 	image_processing->getKinectData();
 	bool peaches = image_processing->checkImage();
 	int pix = 0;
@@ -119,17 +124,23 @@ void draw()
 	{
 		image_processing->debug_print();
 	}
-
-	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL_BGRA, GL_UNSIGNED_BYTE, (GLvoid*)image_processing->data);
+	if (1)
+	{
+		//image_processing->setVideoOutput();
+		std::cout << "Random image value " << image_processing->data[70] << std::endl;
+	}
+	glBindTexture(GL_TEXTURE_2D, image_processing->textureId);
+	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL_BGRA, GL_UNSIGNED_BYTE, (GLvoid*)(image_processing->data));
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glBegin(GL_QUADS);
-	glTexCoord2f(0.0f, 0.0f);
-	glVertex3f(0, 0, 0);
-	glTexCoord2f(1.0f, 0.0f);
-	glVertex3f(width, 0, 0);
-	glTexCoord2f(1.0f, 1.0f);
-	glVertex3f(width, height, 0.0f);
-	glTexCoord2f(0.0f, 1.0f);
-	glVertex3f(0, height, 0.0f);
+		glTexCoord2f(0.0f, 0.0f);
+		glVertex3f(0, 0, 0);
+		glTexCoord2f(1.0f, 0.0f);
+		glVertex3f(width, 0, 0);
+		glTexCoord2f(1.0f, 1.0f);
+		glVertex3f(width, height, 0.0f);
+		glTexCoord2f(0.0f, 1.0f);
+		glVertex3f(0, height, 0.0f);
 	glEnd();
+	glutSwapBuffers();
 }

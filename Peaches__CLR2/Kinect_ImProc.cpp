@@ -97,11 +97,16 @@ void Kinect_ImProc::getRgbData(GLubyte* dest, GLubyte* dest2)
 	if (LockedRect.Pitch != 0)
 	{
 		std::cout << "Doing stuff" << std::endl;
-		const BYTE* start = (const BYTE*)LockedRect.pBits;
 		const BYTE* curr = (const BYTE*)LockedRect.pBits;
+		const BYTE* start = (const BYTE*)LockedRect.pBits;
+		
 		const BYTE* dataEnd = curr + (width*height) * 4;
 		float* fdest = (float*)dest;
 		long* depth2rgb = (long*)depthToRgbMap;
+		while (curr < dataEnd)
+		{
+			*dest2++ = *curr++;
+		} //HERE
 		for (int j = 0; j < height; ++j)
 		{
 			for (int i = 0; i < width; ++i)
@@ -124,10 +129,7 @@ void Kinect_ImProc::getRgbData(GLubyte* dest, GLubyte* dest2)
 				}
 			}
 		}
-		while (curr < dataEnd)
-		{
-			*dest2++ = *curr++;
-		}
+		
 	}
 	texture->UnlockRect(0);
 	sensor->NuiImageStreamReleaseFrame(rgbStream, &imageFrame);
@@ -182,7 +184,7 @@ void Kinect_ImProc::getDepthData(GLubyte* dest)
 void Kinect_ImProc::getKinectData()
 {
 	getDepthData((GLubyte*)vertexarray);
-	getRgbData((GLubyte*)colorarray, data);
+	getRgbData((GLubyte*)colorarray, (GLubyte*)data);
 	//data = (GLubyte*)colorarray;
 }
 
@@ -217,31 +219,31 @@ int Kinect_ImProc::checkPixel(float red, float green, float blue)
 
 void Kinect_ImProc::debug_print()
 {
-	std::ofstream myfile;
-	std::ofstream depthfile;
-	std::ofstream peachfile;
+	//std::ofstream myfile;
+	//std::ofstream depthfile;
+	//std::ofstream peachfile;
 	if (print)
 	{
-		std::string colorfilename = "SampleColorData";
-		std::string depthfilename = "SampleDepthData";
-		std::string peachfilename = "SamplePeachData";
+		//std::string colorfilename = "SampleColorData";
+		//std::string depthfilename = "SampleDepthData";
+		//std::string peachfilename = "SamplePeachData";
 		//char buffer[33];
 		//char *num = _itoa(j, buffer, 10);
-		colorfilename.append(std::to_string(counter));
-		depthfilename.append(std::to_string(counter));
-		peachfilename.append(std::to_string(counter));
-		depthfilename.append(".txt");
-		colorfilename.append(".txt");
-		peachfilename.append(".ppm");
-		myfile.open(colorfilename);
-		depthfile.open(depthfilename);
+		//colorfilename.append(std::to_string(counter));
+		//depthfilename.append(std::to_string(counter));
+		//peachfilename.append(std::to_string(counter));
+		//depthfilename.append(".txt");
+		//colorfilename.append(".txt");
+		//peachfilename.append(".ppm");
+		//myfile.open(colorfilename);
+		//depthfile.open(depthfilename);
 		//peachfile.open(peachfilename);
 		FILE *f = fopen("SamplePeachData.ppm", "wb");
 		fprintf(f, "P6\n%i %i 255\n", width, height);
 		for (int i = 0; i < width*height; i++)
 		{
 			//myfile << colorarray[i * 3] << " " << colorarray[i * 3 + 1] << " " << colorarray[i * 3 + 2] << " ";
-			depthfile << vertexarray[i] << std::endl;
+			//depthfile << vertexarray[i] << std::endl;
 			fputc(locationpeaches[i] * 255, f);
 			fputc(locationpeaches[i] * 255, f);
 			fputc(locationpeaches[i] * 255, f);
@@ -251,8 +253,8 @@ void Kinect_ImProc::debug_print()
 			//	peachfile << std::endl;
 			//}
 		}
-		myfile.close();
-		depthfile.close();
+		//myfile.close();
+		//depthfile.close();
 		fclose(f);
 		//peachfile.close();
 		//j++;
@@ -315,4 +317,17 @@ void Kinect_ImProc::setPositionValues(int pix)
 	{
 		std::cout << x << " " << y << " " << z << std::endl;
 	}
+}
+
+void Kinect_ImProc::setVideoOutput()
+{
+	std::ofstream myfile;
+	FILE *f = fopen("SampleVideoData.ppm", "wb");
+	fprintf(f, "P6\n%i %i 255\n", width, height);
+	for (int i = 0; i < height * width * 3; i++)
+	{
+		data[i] = colorarray[i];
+		fputc(data[i]*255, f);
+	}
+	fclose(f);
 }

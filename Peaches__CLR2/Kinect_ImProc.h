@@ -49,6 +49,7 @@ public:
 	void setPositionValues(int pix);
 	GLuint textureId;
 	GLubyte data[width*height * 4];
+	void setVideoOutput();
 private:
 	HANDLE rgbStream;
 	HANDLE depthStream;
