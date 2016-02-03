@@ -1,4 +1,4 @@
-﻿Build started 2016-01-25 11:06:58 PM.
+﻿Build started 2016-02-03 1:13:31 PM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
@@ -41,7 +41,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp875f81aa47864f7abf139ac30355b89e.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp5cab62131a3d411da2a31332eb01be8f.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -1101,27 +1101,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{875F4185-6BB1-47BB-8A00-B08E663BDF92}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{1252F75A-18E6-490E-BAC3-536192AFF6ED}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{43DBC7C1-0B93-4CB9-85F6-B2740748DC07}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{43681EC7-2D28-478F-BF7B-4573322D00DD}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{875F4185-6BB1-47BB-8A00-B08E663BDF92}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{43DBC7C1-0B93-4CB9-85F6-B2740748DC07}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{1252F75A-18E6-490E-BAC3-536192AFF6ED}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{43681EC7-2D28-478F-BF7B-4573322D00DD}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{1931C4F5-CD7E-46E3-9944-4C1CE8A021A9}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{197CDA1D-0F33-42B6-9F22-3E4CAB086E17}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{875F4185-6BB1-47BB-8A00-B08E663BDF92}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{43DBC7C1-0B93-4CB9-85F6-B2740748DC07}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1401,4 +1401,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.68
+Time Elapsed 00:00:05.72
