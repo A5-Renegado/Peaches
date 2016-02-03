@@ -1,5 +1,5 @@
-﻿Build started 2016-01-25 11:06:58 PM.
-     1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 2016-02-03 1:14:26 PM.
+     1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
          stdafx.cpp
@@ -24,7 +24,7 @@
        ResourceCompile:
          C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Debug\Peaches__CLR2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\lib\x86" /LIBPATH:C:\OpenCV\build\x86\vc12\lib Kinect10.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Debug\Peaches__CLR2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /VERBOSE Debug\app.res
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Debug\Peaches__CLR2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\lib\x86" /LIBPATH:C:\OpenCV\build\x86\vc12\lib Kinect10.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Debug\Peaches__CLR2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /VERBOSE Debug\app.res
          Debug\AssemblyInfo.obj
          Debug\Kinect_ImProc.obj
          Debug\Peaches_Main.obj
@@ -41,7 +41,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp875f81aa47864f7abf139ac30355b89e.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp788956bcad744dabb7b4eb4dd038b870.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -1101,27 +1101,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{875F4185-6BB1-47BB-8A00-B08E663BDF92}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{1252F75A-18E6-490E-BAC3-536192AFF6ED}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{4CB756EF-423A-4193-A7F5-7D18A619E5BD}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{0234A571-B102-41B2-9B29-E17043555481}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{875F4185-6BB1-47BB-8A00-B08E663BDF92}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{4CB756EF-423A-4193-A7F5-7D18A619E5BD}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{1252F75A-18E6-490E-BAC3-536192AFF6ED}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{0234A571-B102-41B2-9B29-E17043555481}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{1931C4F5-CD7E-46E3-9944-4C1CE8A021A9}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{2ECE5AE2-499F-4608-BBED-3C88955972FF}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{875F4185-6BB1-47BB-8A00-B08E663BDF92}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{4CB756EF-423A-4193-A7F5-7D18A619E5BD}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1396,9 +1396,9 @@
               vcruntimed.lib(VCRUNTIME140D.dll)
               vcruntimed.lib(VCRUNTIME140D.dll)
          Finished pass 2
-         Peaches__CLR2.vcxproj -> C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Debug\Peaches__CLR2.exe
-     1>Done Building Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" (Rebuild target(s)).
+         Peaches__CLR2.vcxproj -> C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Debug\Peaches__CLR2.exe
+     1>Done Building Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Peaches__CLR2\Peaches__CLR2.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.68
+Time Elapsed 00:00:05.07
