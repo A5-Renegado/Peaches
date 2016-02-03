@@ -1,0 +1,188 @@
+﻿Build started 2016-02-03 12:22:04 PM.
+     1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"x64\Debug\Peaches__CLR2.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /errorReport:prompt /clr:nostdlib stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"x64\Debug\Peaches__CLR2.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Kinect_ImProc.cpp Peaches_Main.cpp Peaches__CLR2.cpp ThreeDPos.cpp
+         AssemblyInfo.cpp
+         Kinect_ImProc.cpp
+     1>Kinect_ImProc.cpp(82): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
+     1>Kinect_ImProc.cpp(241): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>Kinect_ImProc.cpp(310): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
+     1>Kinect_ImProc.cpp(329): warning C4244: '=': conversion from 'float' to 'GLubyte', possible loss of data
+     1>Kinect_ImProc.cpp(325): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+         Peaches_Main.cpp
+     1>Peaches_Main.cpp(14): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\string.h(552): note: see declaration of 'strdup'
+         Peaches__CLR2.cpp
+         ThreeDPos.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /Zi /clr /nologo /W3 /WX- /Od /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fp"x64\Debug\Peaches__CLR2.pch" /Fa"x64\Debug\\" /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /errorReport:prompt "C:\Users\Ian\AppData\Local\Temp\.NETFramework,Version=v4.5.2.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"x64\Debug\app.res" app.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\x64\Debug\Peaches__CLR2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\lib\x86" /LIBPATH:C:\OpenCV\build\x86\vc12\lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\x64\Debug\Peaches__CLR2.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X64 /VERBOSE x64\Debug\app.res
+         x64\Debug\AssemblyInfo.obj
+         x64\Debug\Kinect_ImProc.obj
+         x64\Debug\Peaches_Main.obj
+         x64\Debug\Peaches__CLR2.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\ThreeDPos.obj
+         "x64\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
+         
+         Starting pass 1
+         Processed /DEFAULTLIB:MSVCRTD
+         Processed /DEFAULTLIB:OLDNAMES
+         Processed /DEFAULTLIB:MSVCMRTD
+         Processed /DEFAULTLIB:MSCOREE
+         LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+         
+         Invoking LINK.EXE:
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp22d66d4699d94583a3c74fd66b474e44.rsp
+          /incremental:no
+          /nologo
+          /fullbuild
+         
+         Starting pass 1
+         Processed /DEFAULTLIB:MSVCRTD
+         Processed /DEFAULTLIB:OLDNAMES
+         Processed /DEFAULTLIB:MSVCMRTD
+         Processed /DEFAULTLIB:MSCOREE
+         Processed /DEFAULTLIB:uuid.lib
+         Processed /DEFAULTLIB:freeglut.lib
+         Processed /DEFAULTLIB:glu32.lib
+         Processed /DEFAULTLIB:opengl32.lib
+         Processed /DEFAULTLIB:gdi32.lib
+         Processed /DEFAULTLIB:winmm.lib
+         Processed /DEFAULTLIB:user32.lib
+         Processed /DEFAULTLIB:msvcprtd
+         
+         Searching libraries
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64\MSVCRTD.lib:
+               Found _fltused
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in ThreeDPos.obj
+                 Loaded MSVCRTD.lib(dllsupp.obj)
+               Found "const type_info::`vftable'" (??_7type_info@@6B@)
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches__CLR2.obj
+                 Loaded MSVCRTD.lib(std_type_info_static.obj)
+               Found "public: virtual char const * __cdecl std::exception::what(void)const " (?what@exception@std@@UEBAPEBDXZ)
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches__CLR2.obj
+                 Loaded MSVCRTD.lib(throw_bad_alloc.obj)
+               Found "void __cdecl __vcrt_va_start_verify_argument_type<char const * const>(void)" (??$__vcrt_va_start_verify_argument_type@QEBD@@YAXXZ)
+                 Referenced in Kinect_ImProc.obj
+                 Loaded MSVCRTD.lib(_error_.obj)
+               Found "void __cdecl operator delete(void *,unsigned __int64)" (??3@YAXPEAX_K@Z)
+                 Referenced in MSVCRTD.lib(std_type_info_static.obj)
+                 Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
+                 Loaded MSVCRTD.lib(delete_scalar_size.obj)
+               Found "int (__cdecl*__cdecl _RTC_GetErrorFunc(void const *))(int,char const *,int,char const *,char const *,...)" (?_RTC_GetErrorFunc@@YAP6AHHPEBDH00ZZPEBX@Z)
+                 Referenced in MSVCRTD.lib(_error_.obj)
+                 Loaded MSVCRTD.lib(_userapi_.obj)
+               Found "int __cdecl _RTC_GetSrcLine(unsigned char *,wchar_t *,unsigned long,int *,wchar_t *,unsigned long)" (?_RTC_GetSrcLine@@YAHPEAEPEA_WKPEAH1K@Z)
+                 Referenced in MSVCRTD.lib(_error_.obj)
+                 Loaded MSVCRTD.lib(_pdblkup_.obj)
+               Found __GSHandlerCheck
+                 Referenced in MSVCRTD.lib(_error_.obj)
+                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
+                 Loaded MSVCRTD.lib(_gshandler_.obj)
+               Found __security_check_cookie
+                 Referenced in MSVCRTD.lib(_error_.obj)
+                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
+                 Referenced in MSVCRTD.lib(_gshandler_.obj)
+                 Loaded MSVCRTD.lib(_amdsecgs_.obj)
+               Found _guard_check_icall
+                 Referenced in MSVCRTD.lib(_error_.obj)
+                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
+                 Loaded MSVCRTD.lib(checkcfg.obj)
+               Found __security_cookie
+                 Referenced in MSVCRTD.lib(_error_.obj)
+                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
+                 Referenced in MSVCRTD.lib(_amdsecgs_.obj)
+                 Loaded MSVCRTD.lib(gs_cookie.obj)
+               Found "void __cdecl operator delete(void *)" (??3@YAXPEAX@Z)
+                 Referenced in MSVCRTD.lib(delete_scalar_size.obj)
+                 Loaded MSVCRTD.lib(delete_scalar.obj)
+               Found __report_gsfailure
+                 Referenced in MSVCRTD.lib(_amdsecgs_.obj)
+                 Loaded MSVCRTD.lib(gs_report.obj)
+               Found __guard_check_icall_fptr
+                 Referenced in MSVCRTD.lib(checkcfg.obj)
+                 Loaded MSVCRTD.lib(guard_support.obj)
+               Found _guard_dispatch_icall_nop
+                 Referenced in MSVCRTD.lib(guard_support.obj)
+                 Loaded MSVCRTD.lib(_guard_dispatch_.obj)
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64\MSVCMRTD.lib:
+               Found "?.cctor@@$$FYMXXZ" (?.cctor@@$$FYMXXZ)
+                 Referenced in stdafx.obj
+                 Referenced in ThreeDPos.obj
+                 Referenced in ThreeDPos.obj
+                 Referenced in .NETFramework,Version=v4.5.2.AssemblyAttributes.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches__CLR2.obj
+                 Referenced in Peaches__CLR2.obj
+                 Referenced in AssemblyInfo.obj
+                 Referenced in AssemblyInfo.obj
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Kinect_ImProc.obj
+                 Loaded MSVCMRTD.lib(mstartup.obj)
+         Processed /DEFAULTLIB:kernel32.lib
+         Processed /DEFAULTLIB:ucrtd.lib
+               Found "extern "C" void __clrcall ___CxxCallUnwindDtor(void (__clrcall*)(void *),void *)" (?___CxxCallUnwindDtor@@$$J0YMXP6MXPEAX@Z0@Z)
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches__CLR2.obj
+                 Referenced in MSVCMRTD.lib(mstartup.obj)
+                 Loaded MSVCMRTD.lib(managdeh.obj)
+               Found "void __cdecl std::_Facet_Register_m(class std::_Facet_base *)" (?_Facet_Register_m@std@@$$FYAXPEAV_Facet_base@1@@Z)
+                 Referenced in Kinect_ImProc.obj
+                 Loaded MSVCMRTD.lib(locale0_implib.obj)
+               Found "void __clrcall `eh vector destructor iterator'(void *,unsigned __int64,unsigned __int64,void (__clrcall*)(void *))" (??_M@$$FYMXPEAX_K1P6MX0@Z@Z)
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches__CLR2.obj
+                 Loaded MSVCMRTD.lib(mehvecdtr.obj)
+               Found "int __clrcall mainCRTStartupStrArray(cli::array<System::PE$AAVString >^)" (?mainCRTStartupStrArray@@$$FYMHP$01EAPE$AAVString@System@@@Z)
+                 Loaded MSVCMRTD.lib(ManagedMain.obj)
+               Found "extern "C" void __clrcall _app_exit_callback(void)" (?_app_exit_callback@@$$J0YMXXZ)
+                 Referenced in MSVCMRTD.lib(mstartup.obj)
+                 Loaded MSVCMRTD.lib(msilexit.obj)
+               Found "void __clrcall _initterm_m(void const * (__clrcall*const *)(void),void const * (__clrcall*const *)(void))" (?_initterm_m@@$$FYMXPEBQ6MPEBXXZ0@Z)
+                 Referenced in MSVCMRTD.lib(mstartup.obj)
+                 Loaded MSVCMRTD.lib(pureMSILcode.obj)
+               Found "extern "C" enum _crt_argv_mode __cdecl _get_startup_argv_mode(void)" (?_get_startup_argv_mode@@$$J0YA?AW4_crt_argv_mode@@XZ)
+                 Referenced in MSVCMRTD.lib(ManagedMain.obj)
+                 Loaded MSVCMRTD.lib(argv_mode.obj)
+               Found "extern "C" int __cdecl _get_startup_new_mode(void)" (?_get_startup_new_mode@@$$J0YAHXZ)
+                 Referenced in MSVCMRTD.lib(ManagedMain.obj)
+                 Loaded MSVCMRTD.lib(new_mode.obj)
+               Found "extern "C" int __cdecl _get_startup_file_mode(void)" (?_get_startup_file_mode@@$$J0YAHXZ)
+                 Referenced in MSVCMRTD.lib(ManagedMain.obj)
+                 Loaded MSVCMRTD.lib(file_mode.obj)
+               Found "extern "C" int __cdecl _get_startup_commit_mode(void)" (?_get_startup_commit_mode@@$$J0YAHXZ)
+                 Referenced in MSVCMRTD.lib(ManagedMain.obj)
+                 Loaded MSVCMRTD.lib(commit_mode.obj)
+               Found "extern "C" int __cdecl _get_startup_thread_locale_mode(void)" (?_get_startup_thread_locale_mode@@$$J0YAHXZ)
+                 Referenced in MSVCMRTD.lib(ManagedMain.obj)
+                 Loaded MSVCMRTD.lib(thread_locale.obj)
+               Found __scrt_default_matherr
+                 Referenced in MSVCMRTD.lib(ManagedMain.obj)
+                 Loaded MSVCMRTD.lib(matherr.obj)
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64\MSCOREE.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64\uuid.lib:
+     1>LINK : fatal error LNK1104: cannot open file 'freeglut.lib'
+     1>Done Building Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Re-test for Dan\Peaches__CLR2\Peaches__CLR2.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.38
