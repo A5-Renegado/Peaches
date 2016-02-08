@@ -1,4 +1,4 @@
-﻿Build started 2016-02-03 1:13:31 PM.
+﻿Build started 2016-02-08 4:44:13 PM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
@@ -7,11 +7,11 @@
          AssemblyInfo.cpp
          Kinect_ImProc.cpp
      1>Kinect_ImProc.cpp(82): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
-     1>Kinect_ImProc.cpp(241): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>Kinect_ImProc.cpp(244): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>Kinect_ImProc.cpp(310): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
-     1>Kinect_ImProc.cpp(329): warning C4244: '=': conversion from 'float' to 'GLubyte', possible loss of data
-     1>Kinect_ImProc.cpp(325): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>Kinect_ImProc.cpp(313): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
+     1>Kinect_ImProc.cpp(332): warning C4244: '=': conversion from 'float' to 'GLubyte', possible loss of data
+     1>Kinect_ImProc.cpp(328): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
          Peaches_Main.cpp
      1>Peaches_Main.cpp(14): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
@@ -41,7 +41,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp5cab62131a3d411da2a31332eb01be8f.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp1aac3262276b43c29dce5c68de567b00.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -1101,27 +1101,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{43DBC7C1-0B93-4CB9-85F6-B2740748DC07}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{43681EC7-2D28-478F-BF7B-4573322D00DD}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{0E949A0A-7ACF-452F-B550-3B0576129AE8}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{16E8F70B-4C9B-4601-A0E5-F15701401572}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{43DBC7C1-0B93-4CB9-85F6-B2740748DC07}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{0E949A0A-7ACF-452F-B550-3B0576129AE8}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{43681EC7-2D28-478F-BF7B-4573322D00DD}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{16E8F70B-4C9B-4601-A0E5-F15701401572}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{197CDA1D-0F33-42B6-9F22-3E4CAB086E17}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{2D114FEC-4729-43BE-B13B-2C0DC594E2B7}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{43DBC7C1-0B93-4CB9-85F6-B2740748DC07}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{0E949A0A-7ACF-452F-B550-3B0576129AE8}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1401,4 +1401,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.72
+Time Elapsed 00:00:08.12

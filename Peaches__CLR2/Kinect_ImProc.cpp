@@ -202,6 +202,9 @@ bool Kinect_ImProc::checkImage()
 		if (isPixel == 1)
 		{
 			peaches = true;
+			data[i * 4] = static_cast<GLubyte>(255.f);
+			data[i * 4 + 1] = static_cast<GLubyte>(255.f);
+			data[i * 4 + 2] = static_cast<GLubyte>(255.f);
 		}
 		locationpeaches[i] = isPixel;
 	}
