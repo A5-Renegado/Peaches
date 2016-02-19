@@ -14,6 +14,8 @@ Kinect_ImProc::Kinect_ImProc()
 	bluemin = 0.4352941;
 	bluemax = 0.7882353;
 	position = new ThreeDPos();
+	lockPosition = false;
+	comLockPosition = false;
 }
 
 Kinect_ImProc::Kinect_ImProc(bool debug)
@@ -32,6 +34,8 @@ Kinect_ImProc::Kinect_ImProc(bool debug)
 	//bluemax = 0.7882353;
 	bluemax = 200.0/255.0;
 	position = new ThreeDPos();
+	lockPosition = false;
+	comLockPosition = false;
 }
 
 bool Kinect_ImProc::check_debug()
@@ -202,6 +206,7 @@ bool Kinect_ImProc::checkImage()
 		if (isPixel == 1)
 		{
 			peaches = true;
+			thereisapeach = true;
 			data[i * 4] = static_cast<GLubyte>(255.f);
 			data[i * 4 + 1] = static_cast<GLubyte>(255.f);
 			data[i * 4 + 2] = static_cast<GLubyte>(255.f);
@@ -324,7 +329,7 @@ void Kinect_ImProc::setPositionValues(int pix)
 
 void Kinect_ImProc::setVideoOutput()
 {
-	std::ofstream myfile;
+	/*std::ofstream myfile;
 	FILE *f = fopen("SampleVideoData.ppm", "wb");
 	fprintf(f, "P6\n%i %i 255\n", width, height);
 	for (int i = 0; i < height * width * 3; i++)
@@ -332,5 +337,14 @@ void Kinect_ImProc::setVideoOutput()
 		data[i] = colorarray[i];
 		fputc(data[i]*255, f);
 	}
-	fclose(f);
+	fclose(f);*/
+}
+
+ThreeDPos * Kinect_ImProc::getPosition()
+{
+	while (lockPosition)
+	{
+
+	}
+	return position;
 }

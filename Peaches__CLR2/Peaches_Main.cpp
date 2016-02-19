@@ -8,6 +8,9 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 {
 	std::string test;
 	int end = 0;
+	//Communications^ testcomms = gcnew Communications();
+	System::Threading::Thread^ testThread = gcnew System::Threading::Thread(gcnew System::Threading::ThreadStart(myTestFunc));
+	testThread->Start();
 	
 	char *myargv[1];
 	int myargc = 1;

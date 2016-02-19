@@ -149,6 +149,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Communications.h" />
     <ClInclude Include="Kinect_ImProc.h" />
     <ClInclude Include="Peaches_Main.h" />
     <ClInclude Include="resource.h" />
@@ -163,6 +164,7 @@
     <ClCompile Include="Kinect_ImProc.cpp" />
     <ClCompile Include="Peaches_Main.cpp" />
     <ClCompile Include="Peaches__CLR2.cpp" />
+    <ClCompile Include="Communications.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

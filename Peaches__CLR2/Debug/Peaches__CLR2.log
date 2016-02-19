@@ -1,22 +1,20 @@
-﻿Build started 2016-02-08 4:44:13 PM.
+﻿Build started 2016-02-19 1:10:55 PM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
          stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Kinect_ImProc.cpp Peaches_Main.cpp Peaches__CLR2.cpp ThreeDPos.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Kinect_ImProc.cpp Peaches_Main.cpp Peaches__CLR2.cpp Communications.cpp ThreeDPos.cpp
          AssemblyInfo.cpp
          Kinect_ImProc.cpp
      1>Kinect_ImProc.cpp(82): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
-     1>Kinect_ImProc.cpp(244): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>Kinect_ImProc.cpp(245): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>Kinect_ImProc.cpp(313): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
-     1>Kinect_ImProc.cpp(332): warning C4244: '=': conversion from 'float' to 'GLubyte', possible loss of data
-     1>Kinect_ImProc.cpp(328): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>Kinect_ImProc.cpp(314): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
          Peaches_Main.cpp
-     1>Peaches_Main.cpp(14): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+     1>Peaches_Main.cpp(17): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\string.h(552): note: see declaration of 'strdup'
          Peaches__CLR2.cpp
+         Communications.cpp
          ThreeDPos.cpp
          Generating Code...
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fp"Debug\Peaches__CLR2.pch" /Fa"Debug\\" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /analyze- /errorReport:prompt "C:\Users\Ian\AppData\Local\Temp\.NETFramework,Version=v4.5.2.AssemblyAttributes.cpp"
@@ -29,6 +27,7 @@
          Debug\Kinect_ImProc.obj
          Debug\Peaches_Main.obj
          Debug\Peaches__CLR2.obj
+         Debug\Communications.obj
          Debug\stdafx.obj
          Debug\ThreeDPos.obj
          "Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
@@ -41,7 +40,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp1aac3262276b43c29dce5c68de567b00.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmpe3920eb363f446a0bd3f58de313a1058.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -72,11 +71,13 @@
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
+                 Referenced in Communications.obj
                  Loaded MSVCRTD.lib(std_type_info_static.obj)
                Found "public: virtual char const * __thiscall std::exception::what(void)const " (?what@exception@std@@UBEPBDXZ)
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
+                 Referenced in Communications.obj
                  Loaded MSVCRTD.lib(throw_bad_alloc.obj)
                Found "void __cdecl __vcrt_va_start_verify_argument_type<char const * const>(void)" (??$__vcrt_va_start_verify_argument_type@QBD@@YAXXZ)
                  Referenced in Kinect_ImProc.obj
@@ -120,10 +121,12 @@
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
                Found "?.cctor@@$$FYMXXZ" (?.cctor@@$$FYMXXZ)
-                 Referenced in stdafx.obj
-                 Referenced in ThreeDPos.obj
                  Referenced in ThreeDPos.obj
                  Referenced in .NETFramework,Version=v4.5.2.AssemblyAttributes.obj
+                 Referenced in Communications.obj
+                 Referenced in Communications.obj
+                 Referenced in stdafx.obj
+                 Referenced in ThreeDPos.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
@@ -136,10 +139,11 @@
          Processed /DEFAULTLIB:kernel32.lib
          Processed /DEFAULTLIB:ucrtd.lib
                Found "extern "C" void __clrcall ___CxxCallUnwindDtor(void (__clrcall*)(void *),void *)" (?___CxxCallUnwindDtor@@$$J0YMXP6MXPAX@Z0@Z)
+                 Referenced in MSVCMRTD.lib(mstartup.obj)
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
-                 Referenced in MSVCMRTD.lib(mstartup.obj)
+                 Referenced in Communications.obj
                  Loaded MSVCMRTD.lib(managdeh.obj)
                Found "void __cdecl std::_Facet_Register_m(class std::_Facet_base *)" (?_Facet_Register_m@std@@$$FYAXPAV_Facet_base@1@@Z)
                  Referenced in Kinect_ImProc.obj
@@ -148,6 +152,7 @@
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
+                 Referenced in Communications.obj
                  Loaded MSVCMRTD.lib(mehvecdtr.obj)
                Found "int __clrcall mainCRTStartupStrArray(cli::array<class System::String ^ >^)" (?mainCRTStartupStrArray@@$$FYMHP$01AP$AAVString@System@@@Z)
                  Loaded MSVCMRTD.lib(ManagedMain.obj)
@@ -184,37 +189,18 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
-               Found "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::showmanyc(void)" (?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JXZ)
-                 Referenced in Kinect_ImProc.obj
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64)" (?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z)
-                 Referenced in Kinect_ImProc.obj
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64)" (?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z)
-                 Referenced in Kinect_ImProc.obj
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "__declspec(dllimport) public: static class std::locale::id std::ctype<char>::id" (__imp_?id@?$ctype@D@std@@2V0locale@2@A)
                  Referenced in Kinect_ImProc.obj
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cout" (__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
+                 Referenced in Communications.obj
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "__declspec(dllimport) class std::basic_istream<char,struct std::char_traits<char> > std::cin" (__imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A)
                  Referenced in Kinect_ImProc.obj
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "__declspec(dllimport) __int64 const std::_BADOFF" (__imp_?_BADOFF@std@@3_JB)
-                 Referenced in Kinect_ImProc.obj
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "__declspec(dllimport) public: static class std::locale::id std::codecvt<char,char,struct _Mbstatet>::id" (__imp_?id@?$codecvt@DDU_Mbstatet@@@std@@2V0locale@2@A)
-                 Referenced in Kinect_ImProc.obj
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found __IMPORT_DESCRIPTOR_MSVCP140D
-                 Referenced in msvcprtd.lib(MSVCP140D.dll)
-                 Referenced in msvcprtd.lib(MSVCP140D.dll)
-                 Referenced in msvcprtd.lib(MSVCP140D.dll)
-                 Referenced in msvcprtd.lib(MSVCP140D.dll)
-                 Referenced in msvcprtd.lib(MSVCP140D.dll)
                  Referenced in msvcprtd.lib(MSVCP140D.dll)
                  Referenced in msvcprtd.lib(MSVCP140D.dll)
                  Referenced in msvcprtd.lib(MSVCP140D.dll)
@@ -507,25 +493,6 @@
          Search transition ??_E_System_error@std@@UAEPAXI@Z->__t2m@??_E_System_error@std@@UAEPAXI@Z
          Search transition ??2@$$FYAPAXI@Z->??2@YAPAXI@Z
          Search transition ??3@$$FYAXPAXI@Z->??3@YAXPAXI@Z
-         Search transition ?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIBEPADXZ->?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ
-         Search transition ?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAEXPAD00@Z->?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z
-         Search transition ?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAEXXZ->?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXXZ
-         Search transition ?_get_stream_buffer_pointers@@$$J0YAHPAU_iobuf@@PAPAPAD1PAPAH@Z->__get_stream_buffer_pointers
-         Search transition ?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAEXPAPAD0PAH001@Z->?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAPAD0PAH001@Z
-         Search transition ??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAE@XZ->??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ
-         Search transition ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z->__t2m@??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z
-         Search transition ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ->__t2m@?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ
-         Search transition ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ->__t2m@?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ
-         Search transition ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z->__t2m@?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z
-         Search transition ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z->__t2m@?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z
-         Search transition ?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ->__t2m@?underflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ
-         Search transition ?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ->__t2m@?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ
-         Search transition ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z->__t2m@?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z
-         Search transition ?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z->__t2m@?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z
-         Search transition ?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PAD_J@Z->__t2m@?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PAD_J@Z
-         Search transition ?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ->__t2m@?sync@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ
-         Search transition ?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z->__t2m@?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z
-         Search transition ??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FUAE@XZ->??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ
          Search transition ?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@$$FQBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ->?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
          Search transition ?_Xout_of_range@std@@$$FYAXPBD@Z->?_Xout_of_range@std@@YAXPBD@Z
          Search transition ?_Xlength_error@std@@$$FYAXPBD@Z->?_Xlength_error@std@@YAXPBD@Z
@@ -575,40 +542,11 @@
          Search transition ?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FQAEHXZ->?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHXZ
          Search transition ?snextc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FQAEHXZ->?snextc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHXZ
          Search transition ?is@?$ctype@D@std@@$$FQBE_NFD@Z->?is@?$ctype@D@std@@QBE_NFD@Z
-         Search transition ?unshift@?$codecvt@DDU_Mbstatet@@@std@@$$FQBEHAAU_Mbstatet@@PAD1AAPAD@Z->?unshift@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PAD1AAPAD@Z
-         Search transition ?fwrite@@$$J0YAIPBXIIPAU_iobuf@@@Z->_fwrite
          Search transition ?NuiGetSensorCount@@$$J14YGJPAH@Z->_NuiGetSensorCount@4
          Search transition ?NuiCreateSensorByIndex@@$$J18YGJHPAPAUINuiSensor@@@Z->_NuiCreateSensorByIndex@8
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@J@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@J@Z
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@PBX@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@PBX@Z
-         Search transition ??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@AEPAXI@Z->__t2m@??_E?$basic_ofstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@AEPAXI@Z
-         Search transition ??1?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FUAE@XZ->??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UAE@XZ
-         Search transition ??0?$basic_ios@DU?$char_traits@D@std@@@std@@$$FIAE@XZ->??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ
-         Search transition ??1?$basic_ios@DU?$char_traits@D@std@@@std@@$$FUAE@XZ->??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ
-         Search transition ??0?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z->??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
          Search transition ??_V@$$FYAXPAXI@Z->??_V@YAXPAXI@Z
-         Search transition ?_lock_file@@$$J0YAXPAU_iobuf@@@Z->__lock_file
-         Search transition ?_unlock_file@@$$J0YAXPAU_iobuf@@@Z->__unlock_file
-         Search transition ?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIBEPADXZ->?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ
-         Search transition ?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIBEPADXZ->?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ
-         Search transition ?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAEPADXZ->?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ
-         Search transition ?out@?$codecvt@DDU_Mbstatet@@@std@@$$FQBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z->?out@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z
-         Search transition ?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIBEPADXZ->?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ
-         Search transition ?_Gndec@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAEPADXZ->?_Gndec@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ
-         Search transition ?ungetc@@$$J0YAHHPAU_iobuf@@@Z->_ungetc
-         Search transition ?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIBEPADXZ->?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ
-         Search transition ?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FIAEPADXZ->?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ
-         Search transition ?fgetc@@$$J0YAHPAU_iobuf@@@Z->_fgetc
-         Search transition ?in@?$codecvt@DDU_Mbstatet@@@std@@$$FQBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z->?in@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z
-         Search transition ?_errno@@$$J0YAPAHXZ->__errno
-         Search transition ?_invalid_parameter_noinfo@@$$J0YAXXZ->__invalid_parameter_noinfo
-         Search transition ?_fseeki64@@$$J0YAHPAU_iobuf@@_JH@Z->__fseeki64
-         Search transition ?fgetpos@@$$J0YAHPAU_iobuf@@PA_J@Z->_fgetpos
-         Search transition ?fsetpos@@$$J0YAHPAU_iobuf@@PB_J@Z->_fsetpos
-         Search transition ?setvbuf@@$$J0YAHPAU_iobuf@@PADHI@Z->_setvbuf
-         Search transition ?fflush@@$$J0YAHPAU_iobuf@@@Z->_fflush
-         Search transition ?always_noconv@codecvt_base@std@@$$FQBE_NXZ->?always_noconv@codecvt_base@std@@QBE_NXZ
-         Search transition ?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@$$FSAIPAPBVfacet@locale@2@PBV42@@Z->?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z
          Search transition ?__glutInitWithExit@@$$J212YGXPAHPAPADP6AXH@Z@Z->___glutInitWithExit@12
          Search transition ?__glutCreateWindowWithExit@@$$J18YGHPBDP6AXH@Z@Z->___glutCreateWindowWithExit@8
          Search transition ?glBindTexture@@$$J18YGXII@Z->_glBindTexture@8
@@ -806,18 +744,6 @@
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::eback(void)const " (?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setg(char *,char *,char *)" (?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Init(void)" (?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Init(char * *,char * *,int *,char * *,char * *,int *)" (?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAPAD0PAH001@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::basic_streambuf<char,struct std::char_traits<char> >(void)" (??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: virtual __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::~basic_streambuf<char,struct std::char_traits<char> >(void)" (??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPBD@Z)
@@ -878,41 +804,9 @@
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: bool __thiscall std::ctype<char>::is(short,char)const " (?is@?$ctype@D@std@@QBE_NFD@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::unshift(struct _Mbstatet &,char *,char *,char * &)const " (?unshift@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PAD1AAPAD@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(long)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@J@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(void const *)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@PBX@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: virtual __thiscall std::basic_ostream<char,struct std::char_traits<char> >::~basic_ostream<char,struct std::char_traits<char> >(void)" (??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UAE@XZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: __thiscall std::basic_ios<char,struct std::char_traits<char> >::basic_ios<char,struct std::char_traits<char> >(void)" (??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: virtual __thiscall std::basic_ios<char,struct std::char_traits<char> >::~basic_ios<char,struct std::char_traits<char> >(void)" (??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: __thiscall std::basic_ostream<char,struct std::char_traits<char> >::basic_ostream<char,struct std::char_traits<char> >(class std::basic_streambuf<char,struct std::char_traits<char> > *,bool)" (??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pptr(void)const " (?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::epptr(void)const " (?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Pninc(void)" (?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::out(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const " (?out@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gptr(void)const " (?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gndec(void)" (?_Gndec@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::egptr(void)const " (?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gninc(void)" (?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::in(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const " (?in@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: bool __thiscall std::codecvt_base::always_noconv(void)const " (?always_noconv@codecvt_base@std@@QBE_NXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: static unsigned int __cdecl std::codecvt<char,char,struct _Mbstatet>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
                Found _Sleep@4
@@ -932,8 +826,6 @@
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
                Found _strlen
                  Loaded ucrtd.lib(ucrtbased.dll)
-               Found __get_stream_buffer_pointers
-                 Loaded ucrtd.lib(ucrtbased.dll)
                Found __CrtDbgReportW
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found __invalid_parameter
@@ -943,30 +835,6 @@
                Found _fputc
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found _fclose
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fwrite
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __lock_file
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __unlock_file
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _ungetc
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fgetc
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __errno
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __invalid_parameter_noinfo
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __fseeki64
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fgetpos
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fsetpos
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _setvbuf
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fflush
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found _abort
                  Loaded ucrtd.lib(ucrtbased.dll)
@@ -1101,27 +969,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{0E949A0A-7ACF-452F-B550-3B0576129AE8}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{16E8F70B-4C9B-4601-A0E5-F15701401572}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{FBB9848F-C035-49DD-8B53-715B5F904078}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{B6CD97FD-DFCE-4DF6-946A-D6F2CB25D981}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{0E949A0A-7ACF-452F-B550-3B0576129AE8}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{FBB9848F-C035-49DD-8B53-715B5F904078}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{16E8F70B-4C9B-4601-A0E5-F15701401572}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{B6CD97FD-DFCE-4DF6-946A-D6F2CB25D981}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{2D114FEC-4729-43BE-B13B-2C0DC594E2B7}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{0A777D08-AF33-433E-8A42-4328B3B98BC9}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{0E949A0A-7ACF-452F-B550-3B0576129AE8}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{FBB9848F-C035-49DD-8B53-715B5F904078}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1149,6 +1017,7 @@
               .NETFramework,Version=v4.5.2.AssemblyAttributes.obj
               ThreeDPos.obj
               stdafx.obj
+              Communications.obj
               Peaches__CLR2.obj
               Peaches_Main.obj
               Kinect_ImProc.obj
@@ -1274,33 +1143,6 @@
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
-              msvcprtd.lib(MSVCP140D.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
@@ -1326,19 +1168,6 @@
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
@@ -1401,4 +1230,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:08.12
+Time Elapsed 00:00:04.08

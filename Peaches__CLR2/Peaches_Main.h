@@ -1,4 +1,6 @@
-#include "Kinect_ImProc.h"
+//#include "Kinect_ImProc.h"
+//#include <thread>
+#include "Communications.h"
 
 
 

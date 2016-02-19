@@ -34,6 +34,7 @@ class Kinect_ImProc
 public:
 	Kinect_ImProc(bool debug);
 	Kinect_ImProc();
+	~Kinect_ImProc() {};
 	bool initKinect();
 	void getRgbData(GLubyte* dest, GLubyte* dest2);
 	void getDepthData(GLubyte* dest);
@@ -50,11 +51,15 @@ public:
 	GLuint textureId;
 	GLubyte data[width*height * 4];
 	void setVideoOutput();
+	bool thereisapeach;
+	ThreeDPos * getPosition();
 private:
 	HANDLE rgbStream;
 	HANDLE depthStream;
 	INuiSensor* sensor;
 
+	bool lockPosition;
+	bool comLockPosition;
 
 	bool debug_mode;
 	bool print;
