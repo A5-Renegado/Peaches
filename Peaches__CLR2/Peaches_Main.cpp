@@ -3,7 +3,7 @@
 
 //Create image processing instance
 Kinect_ImProc *image_processing = new Kinect_ImProc(true);
-
+//Communications^ test_Comms;// = gcnew Communications();
 
 int Peaches_Main::execute(array<System::String ^> ^ argv)
 {
@@ -41,7 +41,7 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 	//Connect to the Kinect. If fail, exit.
 	if (!image_processing->initKinect()) return 0;
 
-	vFMS->setValues();
+	
 	//Initiate Comms
 	Communications^ test_Comms = gcnew Communications();
 	//Start Main Loop (use Glut Main loop for pre-prepared multi-threading and image output prep)
@@ -110,4 +110,10 @@ void draw()
 		glVertex3f(0, height, 0.0f);
 	glEnd();
 	glutSwapBuffers();
+	Communications^ test_Comms = gcnew Communications(true);
+
+	test_Comms->PortM1->Close();
+	test_Comms->PortM2->Close();
+	test_Comms->PortM3->Close();
+	test_Comms->PortP1->Close();
 }

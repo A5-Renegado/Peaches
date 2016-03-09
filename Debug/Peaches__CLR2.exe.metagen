@@ -10,6 +10,7 @@ Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e0
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
 Class Communications: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
     System.IDisposable
@@ -18,5 +19,14 @@ Class Communications: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.IO.Ports.SerialPort PortM2 : Public
     System.IO.Ports.SerialPort PortM3 : Public
     System.IO.Ports.SerialPort PortP1 : Public
+    System.Object m_lock : Public, Static
+    DataStruct* vFMS : Public, Static
   Methods:
+    getVals(): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Peaches_Main: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    execute(String[]): PrivateScope, Public, HideBySig
+    set_debug_mode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    get_debug_mode(): PrivateScope, Public, HideBySig

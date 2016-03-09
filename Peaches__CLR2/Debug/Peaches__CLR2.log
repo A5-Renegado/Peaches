@@ -1,4 +1,4 @@
-﻿Build started 2016-03-08 8:30:05 PM.
+﻿Build started 2016-03-08 10:10:06 PM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
@@ -40,7 +40,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp02459d75d16d4bac95ff4814893d86c0.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp297ef3d39f4e486a986530bfa1d5a97d.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -65,16 +65,18 @@
              Searching Kinect10.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCRTD.lib:
                Found "const type_info::`vftable'" (??_7type_info@@6B@)
+                 Referenced in Peaches__CLR2.obj
                  Referenced in Communications.obj
+                 Referenced in DataStruct.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
-                 Referenced in Peaches__CLR2.obj
                  Loaded MSVCRTD.lib(std_type_info_static.obj)
                Found "public: virtual char const * __thiscall std::exception::what(void)const " (?what@exception@std@@UBEPBDXZ)
+                 Referenced in Peaches__CLR2.obj
                  Referenced in Communications.obj
+                 Referenced in DataStruct.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
-                 Referenced in Peaches__CLR2.obj
                  Loaded MSVCRTD.lib(throw_bad_alloc.obj)
                Found __fltused
                  Referenced in ThreeDPos.obj
@@ -113,17 +115,19 @@
          Processed /DEFAULTLIB:kernel32.lib
          Processed /DEFAULTLIB:ucrtd.lib
                Found "extern "C" void __clrcall ___CxxCallUnwindDtor(void (__clrcall*)(void *),void *)" (?___CxxCallUnwindDtor@@$$J0YMXP6MXPAX@Z0@Z)
+                 Referenced in Peaches__CLR2.obj
                  Referenced in MSVCMRTD.lib(mstartup.obj)
                  Referenced in Communications.obj
+                 Referenced in DataStruct.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
-                 Referenced in Peaches__CLR2.obj
                  Loaded MSVCMRTD.lib(managdeh.obj)
                Found "void __clrcall `eh vector destructor iterator'(void *,unsigned int,unsigned int,void (__clrcall*)(void *))" (??_M@$$FYMXPAXIIP6MX0@Z@Z)
+                 Referenced in Peaches__CLR2.obj
                  Referenced in Communications.obj
+                 Referenced in DataStruct.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
-                 Referenced in Peaches__CLR2.obj
                  Loaded MSVCMRTD.lib(mehvecdtr.obj)
                Found "void __cdecl std::_Facet_Register_m(class std::_Facet_base *)" (?_Facet_Register_m@std@@$$FYAXPAV_Facet_base@1@@Z)
                  Referenced in Kinect_ImProc.obj
@@ -926,27 +930,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{35CA50AC-6744-4CAF-91DD-B0C7DEDFDF5D}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{6F1DD4CD-1758-47D6-B2C6-6D957CA6C86C}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{444FC623-365D-4B35-BC0B-DBAFECB3E6C6}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{2FD1C82F-0D67-42A9-9D8E-B33A56462A4B}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{35CA50AC-6744-4CAF-91DD-B0C7DEDFDF5D}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{444FC623-365D-4B35-BC0B-DBAFECB3E6C6}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{6F1DD4CD-1758-47D6-B2C6-6D957CA6C86C}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{2FD1C82F-0D67-42A9-9D8E-B33A56462A4B}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{6A774679-E96E-468A-BFE3-0AEFCEA87588}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{DFB135BD-9EA4-495E-9C35-F839CA887ED5}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{35CA50AC-6744-4CAF-91DD-B0C7DEDFDF5D}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{444FC623-365D-4B35-BC0B-DBAFECB3E6C6}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1173,4 +1177,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.22
+Time Elapsed 00:00:05.43

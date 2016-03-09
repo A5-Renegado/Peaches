@@ -2,6 +2,7 @@
 #include <Ole2.h>
 //#include <mutex>
 
+
 #include <NuiApi.h>
 #include <NuiImageCamera.h>
 #include <NuiSensor.h>
@@ -24,13 +25,15 @@ extern "C" {
 #include "ThreeDPos.h"
 #include "DataStruct.h"
 
-static DataStruct * vFMS;
+
 
 //std::mutex m;
 
 #define width 640
 #define height 480
 #define GL_BGRA 0x80E1
+
+static DataStruct * globalfVMS = new DataStruct();
 
 class Kinect_ImProc
 {

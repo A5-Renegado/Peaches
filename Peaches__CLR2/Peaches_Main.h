@@ -4,13 +4,14 @@
 
 
 
-class Peaches_Main
+public ref class Peaches_Main
 {
 public:
 	int execute(array<System::String ^> ^ argv);
 	void set_debug_mode(bool debug);
 	bool get_debug_mode();
 	Peaches_Main(bool debug);
+	//Communications^ test_Comms;
 	
 private:
 	bool debug_mode;
