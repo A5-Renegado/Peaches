@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <Ole2.h>
+//#include <mutex>
 
 #include <NuiApi.h>
 #include <NuiImageCamera.h>
@@ -20,10 +21,12 @@ extern "C" {
 #include <fstream>
 #include <string>
 
-//#include "opencv2/core/core.hpp"
-//#include "opencv2/highgui.hpp"
-
 #include "ThreeDPos.h"
+#include "DataStruct.h"
+
+static DataStruct * vFMS;
+
+//std::mutex m;
 
 #define width 640
 #define height 480
@@ -50,7 +53,6 @@ public:
 	void setPositionValues(int pix);
 	GLuint textureId;
 	GLubyte data[width*height * 4];
-	void setVideoOutput();
 	bool thereisapeach;
 	ThreeDPos * getPosition();
 private:

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Peaches_Main.h"
 
+//Create image processing instance
 Kinect_ImProc *image_processing = new Kinect_ImProc(true);
 
 
@@ -8,10 +9,8 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 {
 	std::string test;
 	int end = 0;
-	//Communications^ testcomms = gcnew Communications();
-	System::Threading::Thread^ testThread = gcnew System::Threading::Thread(gcnew System::Threading::ThreadStart(myTestFunc));
-	testThread->Start();
 	
+	//Set up GLUT loop for drawing output
 	char *myargv[1];
 	int myargc = 1;
 	myargv[0] = strdup("Peaches__CLR2");
@@ -22,6 +21,7 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 	glutDisplayFunc(draw);
 	glutIdleFunc(draw);
 
+	//Set GLUT parameters
 	glGenTextures(1, &image_processing->textureId);
 	glBindTexture(GL_TEXTURE_2D, image_processing->textureId);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -38,27 +38,19 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	
-
+	//Connect to the Kinect. If fail, exit.
 	if (!image_processing->initKinect()) return 0;
 
-	//while (execution)
-	//{
-		//std::cout << "In Execution Loop" << std::endl;
-	//	end = main_loop();
-	//	if (end!=0)
-	//	{
-	//		execution = false;
-	//	}
-	//	if (debug_mode)
-	//	{
-	//		std::cout << "Testing pacer, press enter to continue: ";
-	//		std::cin >> test;
-	//	}
-	//	counter++;
-	//	image_processing->setCounter(counter);
-	//}
-
+	vFMS->setValues();
+	//Initiate Comms
+	Communications^ test_Comms = gcnew Communications();
+	//Start Main Loop (use Glut Main loop for pre-prepared multi-threading and image output prep)
 	glutMainLoop();
+	//Close port communications once they are complete
+	test_Comms->PortM1->Close();
+	test_Comms->PortM2->Close();
+	test_Comms->PortM3->Close();
+	test_Comms->PortP1->Close();
 	return 1;
 }
 
@@ -75,48 +67,24 @@ void Peaches_Main::set_debug_mode(bool debug)
 Peaches_Main::Peaches_Main(bool debug)
 {
 	debug_mode = debug;
-	//image_processing = new Kinect_ImProc(debug);
 	counter = 0;
 	execution = true;
 }
 
-int Peaches_Main::main_loop()
-{
-	image_processing->getKinectData();
-	bool peaches = image_processing->checkImage();
-	int pix = 0;
-	pix = image_processing->getCenterOfPeach();
-	std::cout << pix << std::endl;
-	if (pix >= 0)
-	{
-		image_processing->setPositionValues(pix);
-	}
-	else
-	{
-		std::cout << "No peaches" << std::endl;
-	}
-	if (debug_mode)
-	{
-		image_processing->debug_print();
-	}
-	return 0;
-}
-
-int Peaches_Main::main_pub()
-{
-	return main_loop();
-}
-
+//Repeated function in GLUT Main loop
 void draw()
 {
-	
+	//Get data from the Kinect for analysis and display
 	image_processing->getKinectData();
+	//Check for peaches in the image
 	bool peaches = image_processing->checkImage();
 	int pix = 0;
+	//Find the center of the peach
 	pix = image_processing->getCenterOfPeach();
 	std::cout << pix << std::endl;
 	if (pix >= 0)
 	{
+		//Store the position of the peach
 		image_processing->setPositionValues(pix);
 	}
 	else
@@ -127,11 +95,7 @@ void draw()
 	{
 		image_processing->debug_print();
 	}
-	if (1)
-	{
-		//image_processing->setVideoOutput();
-		std::cout << "Random image value " << image_processing->data[70] << std::endl;
-	}
+	//Write image to screen
 	glBindTexture(GL_TEXTURE_2D, image_processing->textureId);
 	glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height, GL_BGRA, GL_UNSIGNED_BYTE, (GLvoid*)(image_processing->data));
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

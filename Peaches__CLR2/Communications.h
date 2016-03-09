@@ -1,15 +1,24 @@
 #include "Kinect_ImProc.h"
+#include <msclr\marshal_cppstd.h>
+
+
+
 public ref class Communications
 {
 public:
-	Communications() {};
+	Communications();
 	~Communications() {};
-	void operator()(Kinect_ImProc *myKinect);
-	void testFunc();
+	System::IO::Ports::SerialPort^ PortM1;
+	System::IO::Ports::SerialPort^ PortM2;
+	System::IO::Ports::SerialPort^ PortM3;
+	System::IO::Ports::SerialPort^ PortP1;
 private:
 	Kinect_ImProc *kinectInfo;
 	void listenToPort();
-	System::IO::Ports::SerialPort myPort;
+	static void DataReceivedHandler1(Object^ sender, System::IO::Ports::SerialDataReceivedEventArgs^ e);
+	static void DataReceivedHandler2(Object^ sender, System::IO::Ports::SerialDataReceivedEventArgs^ e);
+	static void DataReceivedHandler3(Object^ sender, System::IO::Ports::SerialDataReceivedEventArgs^ e);
+	static void DataReceivedHandlerP(Object^ sender, System::IO::Ports::SerialDataReceivedEventArgs^ e);
 
 	int commandOpen();
 	int commandClose();
@@ -23,6 +32,8 @@ private:
 	int commandHalt();
 	int calculateMovements();
 
+	
+
 	bool open;
 	int l1angle;
 	int l2angle;
@@ -32,6 +43,8 @@ private:
 	int status;
 	bool atDeposit;
 	bool atPeach;
+
+	
 };
 
 void myTestFunc();

@@ -1,9 +1,7 @@
 #include "stdafx.h"
 #include "Kinect_ImProc.h"
 
-//extern "C" HRESULT __stdcall NuiGetSensorCount(int* pCount);
-
-
+//Base constructor for non-debug mode. Need to adjust min/max values for lighting.
 Kinect_ImProc::Kinect_ImProc()
 {
 	debug_mode = false;
@@ -18,6 +16,7 @@ Kinect_ImProc::Kinect_ImProc()
 	comLockPosition = false;
 }
 
+//Constructor for either debug or non-debug mode. Min/Max values are good for the orange hockey ball.
 Kinect_ImProc::Kinect_ImProc(bool debug)
 {
 	debug_mode = debug;
@@ -38,11 +37,13 @@ Kinect_ImProc::Kinect_ImProc(bool debug)
 	comLockPosition = false;
 }
 
+//Return whether or not the program is running in debug mode
 bool Kinect_ImProc::check_debug()
 {
 	return debug_mode;
 }
 
+//Connect to the Kinect and prepare to enter the main loop
 bool Kinect_ImProc::initKinect()
 {
 	int numSensors;
@@ -50,7 +51,7 @@ bool Kinect_ImProc::initKinect()
 	{
 		std::cout << "No Sensors" << std::endl;
 		return false;
-	} // GOHERE
+	}
 	if (NuiCreateSensorByIndex(0, &sensor) < 0) return false;
 	HRESULT status = sensor->NuiInitialize(NUI_INITIALIZE_FLAG_USES_DEPTH | NUI_INITIALIZE_FLAG_USES_COLOR);
 	if (status < 0)
@@ -64,6 +65,7 @@ bool Kinect_ImProc::initKinect()
 		return false;
 	}
 
+	//Open stream to gather colour data
 	long rgbSuccess = sensor->NuiImageStreamOpen(
 		NUI_IMAGE_TYPE_COLOR,			// Depth camera or rgb camera?
 		NUI_IMAGE_RESOLUTION_640x480,	// Image resolution
@@ -71,6 +73,7 @@ bool Kinect_ImProc::initKinect()
 		1,		// Number of frames to buffer
 		NULL,	//Event handle
 		&rgbStream);
+	//Open stream to gather depth data
 	long depthSuccess = sensor->NuiImageStreamOpen(
 		NUI_IMAGE_TYPE_DEPTH,			// Depth camera or rgb camera?
 		NUI_IMAGE_RESOLUTION_640x480,	// Image resolution
@@ -86,6 +89,7 @@ bool Kinect_ImProc::initKinect()
 	return sensor;
 }
 
+//Get and interpret RGB data
 void Kinect_ImProc::getRgbData(GLubyte* dest, GLubyte* dest2)
 {
 	NUI_IMAGE_FRAME imageFrame;
@@ -139,6 +143,7 @@ void Kinect_ImProc::getRgbData(GLubyte* dest, GLubyte* dest2)
 	sensor->NuiImageStreamReleaseFrame(rgbStream, &imageFrame);
 }
 
+//Get and interpret depth data
 void Kinect_ImProc::getDepthData(GLubyte* dest)
 {
 	NUI_IMAGE_FRAME imageFrame;
@@ -197,6 +202,7 @@ void Kinect_ImProc::setCounter(int count)
 	counter = count;
 }
 
+//Determine if there is a peach in the image, as well as what pixels contain a peach
 bool Kinect_ImProc::checkImage()
 {
 	bool peaches = false;
@@ -216,6 +222,7 @@ bool Kinect_ImProc::checkImage()
 	return peaches;
 }
 
+//Determines if based on 3 values whether or not that pixel is a peach
 int Kinect_ImProc::checkPixel(float red, float green, float blue)
 {
 	if (red <= redmax && red >= redmin && green <= greenmax && green >= greenmin && blue <= bluemax && blue >= bluemin)
@@ -225,13 +232,14 @@ int Kinect_ImProc::checkPixel(float red, float green, float blue)
 	return 0;
 }
 
+//Debugging routine that outputs values to files as desired - No longer needed but do not delete as it may become necessary again
 void Kinect_ImProc::debug_print()
 {
 	//std::ofstream myfile;
 	//std::ofstream depthfile;
 	//std::ofstream peachfile;
-	if (print)
-	{
+	//if (print)
+	//{
 		//std::string colorfilename = "SampleColorData";
 		//std::string depthfilename = "SampleDepthData";
 		//std::string peachfilename = "SamplePeachData";
@@ -246,30 +254,31 @@ void Kinect_ImProc::debug_print()
 		//myfile.open(colorfilename);
 		//depthfile.open(depthfilename);
 		//peachfile.open(peachfilename);
-		FILE *f = fopen("SamplePeachData.ppm", "wb");
-		fprintf(f, "P6\n%i %i 255\n", width, height);
-		for (int i = 0; i < width*height; i++)
-		{
+		//FILE *f = fopen("SamplePeachData.ppm", "wb");
+		//fprintf(f, "P6\n%i %i 255\n", width, height);
+		//for (int i = 0; i < width*height; i++)
+		//{
 			//myfile << colorarray[i * 3] << " " << colorarray[i * 3 + 1] << " " << colorarray[i * 3 + 2] << " ";
 			//depthfile << vertexarray[i] << std::endl;
-			fputc(locationpeaches[i] * 255, f);
-			fputc(locationpeaches[i] * 255, f);
-			fputc(locationpeaches[i] * 255, f);
+			//fputc(locationpeaches[i] * 255, f);
+			//fputc(locationpeaches[i] * 255, f);
+			//fputc(locationpeaches[i] * 255, f);
 			//peachfile << locationpeaches[i];
 			//if ((i + 1) % width == 0)
 			//{
 			//	peachfile << std::endl;
 			//}
-		}
+		//}
 		//myfile.close();
 		//depthfile.close();
-		fclose(f);
+		//fclose(f);
 		//peachfile.close();
 		//j++;
-		std::cout << position->getX() << " " << position->getY() << " " << position->getZ() << std::endl;
-	}
+		//std::cout << position->getX() << " " << position->getY() << " " << position->getZ() << std::endl;
+	//}
 }
 
+//Calculate width/height of a pixel using linear approximation
 double Kinect_ImProc::estimatePixelSize(long distance)
 {
 	double size = 0;
@@ -281,6 +290,7 @@ double Kinect_ImProc::estimatePixelSize(long distance)
 	return size;
 }
 
+//Determine what pixel contains the center of the peach
 int Kinect_ImProc::getCenterOfPeach()
 {
 	int counter = 0;
@@ -327,19 +337,7 @@ void Kinect_ImProc::setPositionValues(int pix)
 	}
 }
 
-void Kinect_ImProc::setVideoOutput()
-{
-	/*std::ofstream myfile;
-	FILE *f = fopen("SampleVideoData.ppm", "wb");
-	fprintf(f, "P6\n%i %i 255\n", width, height);
-	for (int i = 0; i < height * width * 3; i++)
-	{
-		data[i] = colorarray[i];
-		fputc(data[i]*255, f);
-	}
-	fclose(f);*/
-}
-
+//re-write this. Use Mutex's. This is just bad coding.
 ThreeDPos * Kinect_ImProc::getPosition()
 {
 	while (lockPosition)

@@ -1,20 +1,19 @@
-﻿Build started 2016-02-19 1:10:55 PM.
+﻿Build started 2016-03-08 8:30:05 PM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
          stdafx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Kinect_ImProc.cpp Peaches_Main.cpp Peaches__CLR2.cpp Communications.cpp ThreeDPos.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp Communications.cpp DataStruct.cpp Kinect_ImProc.cpp Peaches_Main.cpp Peaches__CLR2.cpp ThreeDPos.cpp
          AssemblyInfo.cpp
+         Communications.cpp
+         DataStruct.cpp
          Kinect_ImProc.cpp
-     1>Kinect_ImProc.cpp(82): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
-     1>Kinect_ImProc.cpp(245): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>Kinect_ImProc.cpp(314): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
+     1>Kinect_ImProc.cpp(89): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
+     1>Kinect_ImProc.cpp(328): warning C4244: 'argument': conversion from 'double' to 'long', possible loss of data
          Peaches_Main.cpp
-     1>Peaches_Main.cpp(17): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+     1>Peaches_Main.cpp(16): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\string.h(552): note: see declaration of 'strdup'
          Peaches__CLR2.cpp
-         Communications.cpp
          ThreeDPos.cpp
          Generating Code...
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fp"Debug\Peaches__CLR2.pch" /Fa"Debug\\" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /analyze- /errorReport:prompt "C:\Users\Ian\AppData\Local\Temp\.NETFramework,Version=v4.5.2.AssemblyAttributes.cpp"
@@ -24,10 +23,11 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Debug\Peaches__CLR2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\lib\x86" /LIBPATH:C:\OpenCV\build\x86\vc12\lib Kinect10.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches__CLR2\Debug\Peaches__CLR2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /VERBOSE Debug\app.res
          Debug\AssemblyInfo.obj
+         Debug\Communications.obj
+         Debug\DataStruct.obj
          Debug\Kinect_ImProc.obj
          Debug\Peaches_Main.obj
          Debug\Peaches__CLR2.obj
-         Debug\Communications.obj
          Debug\stdafx.obj
          Debug\ThreeDPos.obj
          "Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
@@ -40,7 +40,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmpe3920eb363f446a0bd3f58de313a1058.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp02459d75d16d4bac95ff4814893d86c0.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -58,102 +58,76 @@
          Processed /DEFAULTLIB:winmm.lib
          Processed /DEFAULTLIB:user32.lib
          Processed /DEFAULTLIB:msvcprtd
+         Processed /DEFAULTLIB:comsupp.lib
+         Processed /DEFAULTLIB:oleaut32.lib
          
          Searching libraries
              Searching Kinect10.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCRTD.lib:
-               Found __fltused
-                 Referenced in Kinect_ImProc.obj
-                 Referenced in Peaches_Main.obj
-                 Referenced in ThreeDPos.obj
-                 Loaded MSVCRTD.lib(fltused.obj)
                Found "const type_info::`vftable'" (??_7type_info@@6B@)
+                 Referenced in Communications.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
-                 Referenced in Communications.obj
                  Loaded MSVCRTD.lib(std_type_info_static.obj)
                Found "public: virtual char const * __thiscall std::exception::what(void)const " (?what@exception@std@@UBEPBDXZ)
+                 Referenced in Communications.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
-                 Referenced in Communications.obj
                  Loaded MSVCRTD.lib(throw_bad_alloc.obj)
-               Found "void __cdecl __vcrt_va_start_verify_argument_type<char const * const>(void)" (??$__vcrt_va_start_verify_argument_type@QBD@@YAXXZ)
+               Found __fltused
+                 Referenced in ThreeDPos.obj
+                 Referenced in Communications.obj
+                 Referenced in DataStruct.obj
                  Referenced in Kinect_ImProc.obj
-                 Loaded MSVCRTD.lib(_error_.obj)
+                 Referenced in Peaches_Main.obj
+                 Loaded MSVCRTD.lib(fltused.obj)
                Found "void __cdecl operator delete(void *,unsigned int)" (??3@YAXPAXI@Z)
                  Referenced in MSVCRTD.lib(std_type_info_static.obj)
                  Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
                  Loaded MSVCRTD.lib(delete_scalar_size.obj)
-               Found "int (__cdecl*__cdecl _RTC_GetErrorFunc(void const *))(int,char const *,int,char const *,char const *,...)" (?_RTC_GetErrorFunc@@YAP6AHHPBDH00ZZPBX@Z)
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded MSVCRTD.lib(_userapi_.obj)
-               Found "int __cdecl _RTC_GetSrcLine(unsigned char *,wchar_t *,unsigned long,int *,wchar_t *,unsigned long)" (?_RTC_GetSrcLine@@YAHPAEPA_WKPAH1K@Z)
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded MSVCRTD.lib(_pdblkup_.obj)
-               Found @__security_check_cookie@4
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded MSVCRTD.lib(_secchk_.obj)
-               Found @_guard_check_icall@4
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded MSVCRTD.lib(checkcfg.obj)
-               Found __except_handler4
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded MSVCRTD.lib(_chandler4gs_.obj)
-               Found ___security_cookie
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Referenced in MSVCRTD.lib(_secchk_.obj)
-                 Referenced in MSVCRTD.lib(_chandler4gs_.obj)
-                 Loaded MSVCRTD.lib(gs_cookie.obj)
                Found "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
                  Referenced in MSVCRTD.lib(delete_scalar_size.obj)
                  Loaded MSVCRTD.lib(delete_scalar.obj)
-               Found ___report_gsfailure
-                 Referenced in MSVCRTD.lib(_secchk_.obj)
-                 Loaded MSVCRTD.lib(gs_report.obj)
-               Found ___guard_check_icall_fptr
-                 Referenced in MSVCRTD.lib(checkcfg.obj)
-                 Loaded MSVCRTD.lib(guard_support.obj)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
                Found "?.cctor@@$$FYMXXZ" (?.cctor@@$$FYMXXZ)
-                 Referenced in ThreeDPos.obj
-                 Referenced in .NETFramework,Version=v4.5.2.AssemblyAttributes.obj
-                 Referenced in Communications.obj
-                 Referenced in Communications.obj
                  Referenced in stdafx.obj
                  Referenced in ThreeDPos.obj
+                 Referenced in ThreeDPos.obj
+                 Referenced in .NETFramework,Version=v4.5.2.AssemblyAttributes.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
                  Referenced in Peaches__CLR2.obj
-                 Referenced in AssemblyInfo.obj
-                 Referenced in AssemblyInfo.obj
+                 Referenced in DataStruct.obj
+                 Referenced in DataStruct.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Kinect_ImProc.obj
+                 Referenced in AssemblyInfo.obj
+                 Referenced in AssemblyInfo.obj
+                 Referenced in Communications.obj
+                 Referenced in Communications.obj
                  Loaded MSVCMRTD.lib(mstartup.obj)
          Processed /DEFAULTLIB:kernel32.lib
          Processed /DEFAULTLIB:ucrtd.lib
                Found "extern "C" void __clrcall ___CxxCallUnwindDtor(void (__clrcall*)(void *),void *)" (?___CxxCallUnwindDtor@@$$J0YMXP6MXPAX@Z0@Z)
                  Referenced in MSVCMRTD.lib(mstartup.obj)
+                 Referenced in Communications.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
                  Referenced in Peaches__CLR2.obj
-                 Referenced in Communications.obj
                  Loaded MSVCMRTD.lib(managdeh.obj)
+               Found "void __clrcall `eh vector destructor iterator'(void *,unsigned int,unsigned int,void (__clrcall*)(void *))" (??_M@$$FYMXPAXIIP6MX0@Z@Z)
+                 Referenced in Communications.obj
+                 Referenced in Kinect_ImProc.obj
+                 Referenced in Peaches_Main.obj
+                 Referenced in Peaches__CLR2.obj
+                 Loaded MSVCMRTD.lib(mehvecdtr.obj)
                Found "void __cdecl std::_Facet_Register_m(class std::_Facet_base *)" (?_Facet_Register_m@std@@$$FYAXPAV_Facet_base@1@@Z)
                  Referenced in Kinect_ImProc.obj
                  Loaded MSVCMRTD.lib(locale0_implib.obj)
-               Found "void __clrcall `eh vector destructor iterator'(void *,unsigned int,unsigned int,void (__clrcall*)(void *))" (??_M@$$FYMXPAXIIP6MX0@Z@Z)
-                 Referenced in Kinect_ImProc.obj
-                 Referenced in Peaches_Main.obj
-                 Referenced in Peaches__CLR2.obj
-                 Referenced in Communications.obj
-                 Loaded MSVCMRTD.lib(mehvecdtr.obj)
                Found "int __clrcall mainCRTStartupStrArray(cli::array<class System::String ^ >^)" (?mainCRTStartupStrArray@@$$FYMHP$01AP$AAVString@System@@@Z)
                  Loaded MSVCMRTD.lib(ManagedMain.obj)
                Found "extern "C" void __clrcall _app_exit_callback(void)" (?_app_exit_callback@@$$J0YMXXZ)
@@ -189,13 +163,13 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
-               Found "__declspec(dllimport) public: static class std::locale::id std::ctype<char>::id" (__imp_?id@?$ctype@D@std@@2V0locale@2@A)
-                 Referenced in Kinect_ImProc.obj
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cout" (__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+                 Referenced in Communications.obj
                  Referenced in Kinect_ImProc.obj
                  Referenced in Peaches_Main.obj
-                 Referenced in Communications.obj
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "__declspec(dllimport) public: static class std::locale::id std::ctype<char>::id" (__imp_?id@?$ctype@D@std@@2V0locale@2@A)
+                 Referenced in Kinect_ImProc.obj
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "__declspec(dllimport) class std::basic_istream<char,struct std::char_traits<char> > std::cin" (__imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A)
                  Referenced in Kinect_ImProc.obj
@@ -211,94 +185,12 @@
                Found MSVCP140D_NULL_THUNK_DATA
                  Referenced in msvcprtd.lib(MSVCP140D.dll)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
-               Found __imp__IsDebuggerPresent@0
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__RaiseException@16
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__MultiByteToWideChar@24
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__WideCharToMultiByte@32
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__GetLastError@0
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__HeapAlloc@12
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__HeapFree@12
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__GetProcessHeap@0
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__VirtualQuery@12
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__FreeLibrary@4
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__GetProcAddress@8
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__UnhandledExceptionFilter@4
-                 Referenced in MSVCRTD.lib(gs_report.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__SetUnhandledExceptionFilter@4
-                 Referenced in MSVCRTD.lib(gs_report.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__GetCurrentProcess@0
-                 Referenced in MSVCRTD.lib(gs_report.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __imp__TerminateProcess@8
-                 Referenced in MSVCRTD.lib(gs_report.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found _IsProcessorFeaturePresent@4
-                 Referenced in MSVCRTD.lib(gs_report.obj)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found __IMPORT_DESCRIPTOR_KERNEL32
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Loaded kernel32.lib(KERNEL32.dll)
-               Found KERNEL32_NULL_THUNK_DATA
-                 Referenced in kernel32.lib(KERNEL32.dll)
-                 Loaded kernel32.lib(KERNEL32.dll)
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
-               Found ___stdio_common_vfprintf
-                 Referenced in Kinect_ImProc.obj
-                 Loaded ucrtd.lib(ucrtbased.dll)
                Found _exit
                  Referenced in Peaches_Main.obj
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found ___stdio_common_vsprintf_s
-                 Referenced in MSVCRTD.lib(_error_.obj)
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __wmakepath_s
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found __wsplitpath_s
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded ucrtd.lib(ucrtbased.dll)
-               Found _wcscpy_s
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found __free_dbg
                  Referenced in MSVCRTD.lib(delete_scalar.obj)
@@ -307,11 +199,6 @@
                  Referenced in MSVCMRTD.lib(ManagedMain.obj)
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found __IMPORT_DESCRIPTOR_ucrtbased
-                 Referenced in ucrtd.lib(ucrtbased.dll)
-                 Referenced in ucrtd.lib(ucrtbased.dll)
-                 Referenced in ucrtd.lib(ucrtbased.dll)
-                 Referenced in ucrtd.lib(ucrtbased.dll)
-                 Referenced in ucrtd.lib(ucrtbased.dll)
                  Referenced in ucrtd.lib(ucrtbased.dll)
                  Referenced in ucrtd.lib(ucrtbased.dll)
                  Referenced in ucrtd.lib(ucrtbased.dll)
@@ -350,6 +237,29 @@
                Found ___scrt_is_ucrt_dll_in_use
                  Referenced in MSVCRTD.lib(utility.obj)
                  Loaded MSVCRTD.lib(ucrt_detection.obj)
+               Found @_guard_check_icall@4
+                 Referenced in MSVCRTD.lib(utility.obj)
+                 Referenced in MSVCRTD.lib(_initsect_.obj)
+                 Loaded MSVCRTD.lib(checkcfg.obj)
+               Found __except_handler4
+                 Referenced in MSVCRTD.lib(utility.obj)
+                 Loaded MSVCRTD.lib(_chandler4gs_.obj)
+               Found ___security_cookie
+                 Referenced in MSVCRTD.lib(utility.obj)
+                 Referenced in MSVCRTD.lib(utility.obj)
+                 Referenced in MSVCRTD.lib(_cpu_disp_.obj)
+                 Referenced in MSVCRTD.lib(_chandler4gs_.obj)
+                 Loaded MSVCRTD.lib(gs_cookie.obj)
+               Found @__security_check_cookie@4
+                 Referenced in MSVCRTD.lib(_cpu_disp_.obj)
+                 Referenced in MSVCRTD.lib(_chandler4gs_.obj)
+                 Loaded MSVCRTD.lib(_secchk_.obj)
+               Found ___guard_check_icall_fptr
+                 Referenced in MSVCRTD.lib(checkcfg.obj)
+                 Loaded MSVCRTD.lib(guard_support.obj)
+               Found ___report_gsfailure
+                 Referenced in MSVCRTD.lib(_secchk_.obj)
+                 Loaded MSVCRTD.lib(gs_report.obj)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCMRTD.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\MSCOREE.lib:
@@ -361,12 +271,49 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
+               Found __imp__IsDebuggerPresent@0
+                 Referenced in MSVCRTD.lib(utility_desktop.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__UnhandledExceptionFilter@4
+                 Referenced in MSVCRTD.lib(utility_desktop.obj)
+                 Referenced in MSVCRTD.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__SetUnhandledExceptionFilter@4
+                 Referenced in MSVCRTD.lib(utility_desktop.obj)
+                 Referenced in MSVCRTD.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
                Found __imp__GetStartupInfoW@4
                  Referenced in MSVCRTD.lib(utility_desktop.obj)
                  Loaded kernel32.lib(KERNEL32.dll)
+               Found _IsProcessorFeaturePresent@4
+                 Referenced in MSVCRTD.lib(utility_desktop.obj)
+                 Referenced in MSVCRTD.lib(_cpu_disp_.obj)
+                 Referenced in MSVCRTD.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
                Found __imp__GetModuleHandleW@4
                  Referenced in MSVCRTD.lib(utility_desktop.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__GetCurrentProcess@0
+                 Referenced in MSVCRTD.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __imp__TerminateProcess@8
+                 Referenced in MSVCRTD.lib(gs_report.obj)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found __IMPORT_DESCRIPTOR_KERNEL32
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Referenced in kernel32.lib(KERNEL32.dll)
+                 Loaded kernel32.lib(KERNEL32.dll)
+               Found KERNEL32_NULL_THUNK_DATA
+                 Referenced in kernel32.lib(KERNEL32.dll)
                  Loaded kernel32.lib(KERNEL32.dll)
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
                Found __seh_filter_dll
@@ -409,22 +356,10 @@
                Found __CxxThrowException@8
                  Referenced in MSVCRTD.lib(throw_bad_alloc.obj)
                  Loaded vcruntimed.lib(VCRUNTIME140D.dll)
-               Found ___vcrt_GetModuleFileNameW
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded vcruntimed.lib(VCRUNTIME140D.dll)
-               Found ___vcrt_GetModuleHandleW
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded vcruntimed.lib(VCRUNTIME140D.dll)
-               Found ___vcrt_LoadLibraryExW
-                 Referenced in MSVCRTD.lib(_pdblkup_.obj)
-                 Loaded vcruntimed.lib(VCRUNTIME140D.dll)
                Found __except_handler4_common
                  Referenced in MSVCRTD.lib(_chandler4gs_.obj)
                  Loaded vcruntimed.lib(VCRUNTIME140D.dll)
                Found __IMPORT_DESCRIPTOR_VCRUNTIME140D
-                 Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
-                 Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
-                 Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
                  Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
                  Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
                  Referenced in vcruntimed.lib(VCRUNTIME140D.dll)
@@ -446,6 +381,8 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
          
@@ -470,6 +407,8 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\vcruntimed.lib:
@@ -480,6 +419,7 @@
          Search transition ?__std_exception_destroy@@$$J0YAXPAU__std_exception_data@@@Z->___std_exception_destroy
          Search transition ?__ExceptionPtrDestroy@@$$FYAXPAX@Z->?__ExceptionPtrDestroy@@YAXPAX@Z
          Search transition ?__ExceptionPtrCopy@@$$FYAXPAXPBX@Z->?__ExceptionPtrCopy@@YAXPAXPBX@Z
+         Search transition ?memcmp@@$$J0YAHPBX0I@Z->_memcmp
          Search transition ?strlen@@$$J0YAIPBD@Z->_strlen
          Search transition ?memcpy@@$$J0YAPAXPAXPBXI@Z->_memcpy
          Search transition ?memmove@@$$J0YAPAXPAXPBXI@Z->_memmove
@@ -487,22 +427,14 @@
          Search transition ?_Debug_message@std@@$$FYAXPB_W0I@Z->?_Debug_message@std@@YAXPB_W0I@Z
          Search transition ??0_Lockit@std@@$$FQAE@H@Z->??0_Lockit@std@@QAE@H@Z
          Search transition ??1_Lockit@std@@$$FQAE@XZ->??1_Lockit@std@@QAE@XZ
-         Search transition ??_Ebad_cast@std@@UAEPAXI@Z->__t2m@??_Ebad_cast@std@@UAEPAXI@Z
          Search transition ??_Eruntime_error@std@@UAEPAXI@Z->__t2m@??_Eruntime_error@std@@UAEPAXI@Z
-         Search transition ?_Getgloballocale@locale@std@@$$FCAPAV_Locimp@12@XZ->?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ
          Search transition ??_E_System_error@std@@UAEPAXI@Z->__t2m@??_E_System_error@std@@UAEPAXI@Z
-         Search transition ??2@$$FYAPAXI@Z->??2@YAPAXI@Z
-         Search transition ??3@$$FYAXPAXI@Z->??3@YAXPAXI@Z
+         Search transition ?WideCharToMultiByte@@$$J232YGHIKPB_WHPADHPBDPAH@Z->_WideCharToMultiByte@32
+         Search transition ??_V@$$FYAXPAX@Z->??_V@YAXPAX@Z
+         Search transition ??_U@$$FYAPAXI@Z->??_U@YAPAXI@Z
          Search transition ?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@$$FQBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ->?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
          Search transition ?_Xout_of_range@std@@$$FYAXPBD@Z->?_Xout_of_range@std@@YAXPBD@Z
          Search transition ?_Xlength_error@std@@$$FYAXPBD@Z->?_Xlength_error@std@@YAXPBD@Z
-         Search transition ?_Lockit_ctor@_Lockit@std@@$$FSAXH@Z->?_Lockit_ctor@_Lockit@std@@SAXH@Z
-         Search transition ??Bid@locale@std@@$$FQAEIXZ->??Bid@locale@std@@QAEIXZ
-         Search transition ?_Getcat@?$ctype@D@std@@$$FSAIPAPBVfacet@locale@2@PBV42@@Z->?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z
-         Search transition ??1bad_cast@std@@UAE@XZ->__t2m@??1bad_cast@std@@UAE@XZ
-         Search transition ??0bad_cast@std@@QAE@ABV01@@Z->__t2m@??0bad_cast@std@@QAE@ABV01@@Z
-         Search transition ?_CxxThrowException@@$$J18YGXPAXPBU_s__ThrowInfo@@@Z->__CxxThrowException@8
-         Search transition ?_Lockit_dtor@_Lockit@std@@$$FSAXH@Z->?_Lockit_dtor@_Lockit@std@@SAXH@Z
          Search transition ?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@$$FQBEDD@Z->?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z
          Search transition ?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV12@D@Z->?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z
          Search transition ?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV12@XZ->?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ
@@ -510,6 +442,8 @@
          Search transition ?_invalid_parameter@@$$J0YAXPB_W00II@Z->__invalid_parameter
          Search transition ??3@$$FYAXPAX@Z->??3@YAXPAX@Z
          Search transition ?_Xbad_alloc@std@@$$FYAXXZ->?_Xbad_alloc@std@@YAXXZ
+         Search transition ??2@$$FYAPAXI@Z->??2@YAPAXI@Z
+         Search transition ??_Ebad_cast@std@@UAEPAXI@Z->__t2m@??_Ebad_cast@std@@UAEPAXI@Z
          Search transition ??_Esystem_error@std@@UAEPAXI@Z->__t2m@??_Esystem_error@std@@UAEPAXI@Z
          Search transition ?uncaught_exception@std@@$$FYA_NXZ->?uncaught_exception@std@@YA_NXZ
          Search transition ?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEXXZ->?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ
@@ -527,17 +461,27 @@
          Search transition ?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@$$FQAEXH_N@Z->?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z
          Search transition ?__CxxDetectRethrow@@$$J0YAHPAX@Z->___CxxDetectRethrow
          Search transition ?__CxxUnregisterExceptionObject@@$$J0YAXPAXH@Z->___CxxUnregisterExceptionObject
-         Search transition ?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@$$FQAE_N_N@Z->?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE_N_N@Z
          Search transition ??_Efailure@ios_base@std@@UAEPAXI@Z->__t2m@??_Efailure@ios_base@std@@UAEPAXI@Z
+         Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@H@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z
          Search transition ??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z->__t2m@??$endl@DU?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@@Z
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@P6AAAV01@AAV01@@Z@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z
+         Search transition ?_CxxThrowException@@$$J18YGXPAXPBU_s__ThrowInfo@@@Z->__CxxThrowException@8
+         Search transition ?_errno@@$$J0YAPAHXZ->__errno
+         Search transition ?strtof@@$$J0YAMPBDPAPAD@Z->_strtof
+         Search transition ?_Xinvalid_argument@std@@$$FYAXPBD@Z->?_Xinvalid_argument@std@@YAXPBD@Z
+         Search transition ?strspn@@$$J0YAIPBD0@Z->_strspn
+         Search transition ??_V@$$FYAXPAXI@Z->??_V@YAXPAXI@Z
+         Search transition ??3@$$FYAXPAXI@Z->??3@YAXPAXI@Z
+         Search transition ?_Getgloballocale@locale@std@@$$FCAPAV_Locimp@12@XZ->?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ
+         Search transition ?_Lockit_ctor@_Lockit@std@@$$FSAXH@Z->?_Lockit_ctor@_Lockit@std@@SAXH@Z
+         Search transition ??Bid@locale@std@@$$FQAEIXZ->??Bid@locale@std@@QAEIXZ
+         Search transition ?_Getcat@?$ctype@D@std@@$$FSAIPAPBVfacet@locale@2@PBV42@@Z->?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z
+         Search transition ??1bad_cast@std@@UAE@XZ->__t2m@??1bad_cast@std@@UAE@XZ
+         Search transition ??0bad_cast@std@@QAE@ABV01@@Z->__t2m@??0bad_cast@std@@QAE@ABV01@@Z
+         Search transition ?_Lockit_dtor@_Lockit@std@@$$FSAXH@Z->?_Lockit_dtor@_Lockit@std@@SAXH@Z
+         Search transition ?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@$$FQAE_N_N@Z->?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE_N_N@Z
          Search transition ?NuiImageGetColorPixelCoordinatesFromDepthPixelAtResolution@@$$J232YGJW4_NUI_IMAGE_RESOLUTION@@0PBU_NUI_IMAGE_VIEW_AREA@@JJGPAJ2@Z->_NuiImageGetColorPixelCoordinatesFromDepthPixelAtResolution@32
-         Search transition ?fopen@@$$J0YAPAU_iobuf@@PBD0@Z->_fopen
-         Search transition ?fprintf@@$$J0YAHQAU_iobuf@@QBDZZ->_fprintf
-         Search transition ?fputc@@$$J0YAHHPAU_iobuf@@@Z->_fputc
-         Search transition ?fclose@@$$J0YAHPAU_iobuf@@@Z->_fclose
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@N@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z
-         Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@H@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z
          Search transition ?getloc@ios_base@std@@$$FQBE?AVlocale@2@XZ->?getloc@ios_base@std@@QBE?AVlocale@2@XZ
          Search transition ?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FQAEHXZ->?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHXZ
          Search transition ?snextc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@$$FQAEHXZ->?snextc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHXZ
@@ -546,7 +490,6 @@
          Search transition ?NuiCreateSensorByIndex@@$$J18YGJHPAPAUINuiSensor@@@Z->_NuiCreateSensorByIndex@8
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@J@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@J@Z
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@PBX@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@PBX@Z
-         Search transition ??_V@$$FYAXPAXI@Z->??_V@YAXPAXI@Z
          Search transition ?__glutInitWithExit@@$$J212YGXPAHPAPADP6AXH@Z@Z->___glutInitWithExit@12
          Search transition ?__glutCreateWindowWithExit@@$$J18YGHPBDP6AXH@Z@Z->___glutCreateWindowWithExit@8
          Search transition ?glBindTexture@@$$J18YGXII@Z->_glBindTexture@8
@@ -584,9 +527,9 @@
          Search transition ?_getFiberPtrId@@$$FYAPAXXZ->?_getFiberPtrId@@YAPAXXZ
          Search transition ?Sleep@@$$J14YGXK@Z->_Sleep@4
          Search transition ?__FrameUnwindFilter@@$$J0YAHPAU_EXCEPTION_POINTERS@@@Z->___FrameUnwindFilter
+         Search transition ?terminate@@$$J0YAXXZ->_terminate
          Search transition ?_malloc_dbg@@$$J0YAPAXIHPBDH@Z->__malloc_dbg
          Search transition ?_free_dbg@@$$J0YAXPAXH@Z->__free_dbg
-         Search transition ?terminate@@$$J0YAXXZ->_terminate
          Search transition ?_configure_wide_argv@@$$J0YAHW4_crt_argv_mode@@@Z->__configure_wide_argv
          Search transition ?_set_new_mode@@$$J0YAHH@Z->__set_new_mode
          Search transition ?_get_initial_wide_environment@@$$J0YAPAPA_WXZ->__get_initial_wide_environment
@@ -625,15 +568,17 @@
                  Referenced in Kinect10.lib(Kinect10.dll)
                  Loaded Kinect10.lib(Kinect10.dll)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\MSVCRTD.lib:
+               Found "void __cdecl operator delete[](void *)" (??_V@YAXPAX@Z)
+                 Loaded MSVCRTD.lib(delete_array.obj)
+               Found "void * __cdecl operator new[](unsigned int)" (??_U@YAPAXI@Z)
+                 Loaded MSVCRTD.lib(new_array.obj)
                Found "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+                 Referenced in MSVCRTD.lib(new_array.obj)
                  Loaded MSVCRTD.lib(new_scalar.obj)
                Found "void __cdecl operator delete[](void *,unsigned int)" (??_V@YAXPAXI@Z)
                  Loaded MSVCRTD.lib(delete_array_size.obj)
                Found ___security_init_cookie
                  Loaded MSVCRTD.lib(gs_support.obj)
-               Found "void __cdecl operator delete[](void *)" (??_V@YAXPAX@Z)
-                 Referenced in MSVCRTD.lib(delete_array_size.obj)
-                 Loaded MSVCRTD.lib(delete_array.obj)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\OLDNAMES.lib:
                Found _strdup
                  Loaded OLDNAMES.lib(strdup.obj)
@@ -742,21 +687,11 @@
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: __thiscall std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QAE@XZ)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPBD@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: static void __cdecl std::_Lockit::_Lockit_ctor(int)" (?_Lockit_ctor@_Lockit@std@@SAXH@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: __thiscall std::locale::id::operator unsigned int(void)" (??Bid@locale@std@@QAEIXZ)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: static unsigned int __cdecl std::ctype<char>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z)
-                 Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: static void __cdecl std::_Lockit::_Lockit_dtor(int)" (?_Lockit_dtor@_Lockit@std@@SAXH@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::widen(char)const " (?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
@@ -788,13 +723,25 @@
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: bool __thiscall std::basic_istream<char,struct std::char_traits<char> >::_Ipfx(bool)" (?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE_N_N@Z)
+               Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z)
+               Found "void __cdecl std::_Xinvalid_argument(char const *)" (?_Xinvalid_argument@std@@YAXPBD@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
-               Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z)
+               Found "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: static void __cdecl std::_Lockit::_Lockit_ctor(int)" (?_Lockit_ctor@_Lockit@std@@SAXH@Z)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: __thiscall std::locale::id::operator unsigned int(void)" (??Bid@locale@std@@QAEIXZ)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: static unsigned int __cdecl std::ctype<char>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$ctype@D@std@@SAIPAPBVfacet@locale@2@PBV42@@Z)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: static void __cdecl std::_Lockit::_Lockit_dtor(int)" (?_Lockit_dtor@_Lockit@std@@SAXH@Z)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: bool __thiscall std::basic_istream<char,struct std::char_traits<char> >::_Ipfx(bool)" (?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE_N_N@Z)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::locale __thiscall std::ios_base::getloc(void)const " (?getloc@ios_base@std@@QBE?AVlocale@2@XZ)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
@@ -808,7 +755,11 @@
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(void const *)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@PBX@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
+               Found _WideCharToMultiByte@32
+                 Loaded kernel32.lib(KERNEL32.dll)
                Found _Sleep@4
                  Loaded kernel32.lib(KERNEL32.dll)
                Found __imp__QueryPerformanceCounter@4
@@ -830,11 +781,11 @@
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found __invalid_parameter
                  Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fopen
+               Found __errno
                  Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fputc
+               Found _strtof
                  Loaded ucrtd.lib(ucrtbased.dll)
-               Found _fclose
+               Found _strspn
                  Loaded ucrtd.lib(ucrtbased.dll)
                Found _abort
                  Loaded ucrtd.lib(ucrtbased.dll)
@@ -866,6 +817,8 @@
                  Referenced in OLDNAMES.lib(strdup.obj)
                  Loaded ucrtd.lib(ucrtbased.dll)
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\vcruntimed.lib:
+               Found _memcmp
+                 Loaded vcruntimed.lib(VCRUNTIME140D.dll)
                Found _memcpy
                  Loaded vcruntimed.lib(VCRUNTIME140D.dll)
                Found _memmove
@@ -931,6 +884,8 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\vcruntimed.lib:
@@ -958,6 +913,8 @@
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
              Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
              Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.10150.0\ucrt\x86\ucrtd.lib:
              Searching C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\vcruntimed.lib:
@@ -969,27 +926,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{FBB9848F-C035-49DD-8B53-715B5F904078}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{B6CD97FD-DFCE-4DF6-946A-D6F2CB25D981}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{35CA50AC-6744-4CAF-91DD-B0C7DEDFDF5D}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{6F1DD4CD-1758-47D6-B2C6-6D957CA6C86C}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{FBB9848F-C035-49DD-8B53-715B5F904078}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{35CA50AC-6744-4CAF-91DD-B0C7DEDFDF5D}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{B6CD97FD-DFCE-4DF6-946A-D6F2CB25D981}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{6F1DD4CD-1758-47D6-B2C6-6D957CA6C86C}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{0A777D08-AF33-433E-8A42-4328B3B98BC9}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{6A774679-E96E-468A-BFE3-0AEFCEA87588}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{FBB9848F-C035-49DD-8B53-715B5F904078}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{35CA50AC-6744-4CAF-91DD-B0C7DEDFDF5D}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1011,16 +968,19 @@
            C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib
            C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winmm.lib
            C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib
+           C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\comsupp.lib
+           C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib
          
          Starting pass 2
               app.res
               .NETFramework,Version=v4.5.2.AssemblyAttributes.obj
               ThreeDPos.obj
               stdafx.obj
-              Communications.obj
               Peaches__CLR2.obj
               Peaches_Main.obj
               Kinect_ImProc.obj
+              DataStruct.obj
+              Communications.obj
               AssemblyInfo.obj
               Kinect10.lib(Kinect10.dll)
               Kinect10.lib(Kinect10.dll)
@@ -1028,10 +988,7 @@
               Kinect10.lib(Kinect10.dll)
               Kinect10.lib(Kinect10.dll)
               MSVCRTD.lib(_cpu_disp_.obj)
-              MSVCRTD.lib(_error_.obj)
               MSVCRTD.lib(_initsect_.obj)
-              MSVCRTD.lib(_pdblkup_.obj)
-              MSVCRTD.lib(_userapi_.obj)
               MSVCRTD.lib(_chandler4gs_.obj)
               MSVCRTD.lib(_secchk_.obj)
               MSVCRTD.lib(gs_cookie.obj)
@@ -1047,6 +1004,7 @@
               MSVCRTD.lib(delete_array_size.obj)
               MSVCRTD.lib(delete_scalar.obj)
               MSVCRTD.lib(delete_scalar_size.obj)
+              MSVCRTD.lib(new_array.obj)
               MSVCRTD.lib(new_scalar.obj)
               MSVCRTD.lib(throw_bad_alloc.obj)
               MSVCRTD.lib(initializers.obj)
@@ -1143,6 +1101,7 @@
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
+              msvcprtd.lib(MSVCP140D.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
@@ -1159,15 +1118,6 @@
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
-              kernel32.lib(KERNEL32.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
@@ -1202,13 +1152,6 @@
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
               ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              ucrtd.lib(ucrtbased.dll)
-              vcruntimed.lib(VCRUNTIME140D.dll)
-              vcruntimed.lib(VCRUNTIME140D.dll)
               vcruntimed.lib(VCRUNTIME140D.dll)
               vcruntimed.lib(VCRUNTIME140D.dll)
               vcruntimed.lib(VCRUNTIME140D.dll)
@@ -1230,4 +1173,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.08
+Time Elapsed 00:00:04.22
