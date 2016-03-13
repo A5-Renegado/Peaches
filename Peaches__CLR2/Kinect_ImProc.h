@@ -1,7 +1,5 @@
 #include <Windows.h>
 #include <Ole2.h>
-//#include <mutex>
-
 
 #include <NuiApi.h>
 #include <NuiImageCamera.h>
@@ -17,23 +15,24 @@ extern "C" {
 }
 #endif
 
-
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cmath>
 
 #include "ThreeDPos.h"
 #include "DataStruct.h"
-
-
-
-//std::mutex m;
+#include "MotorManager.h"
 
 #define width 640
 #define height 480
 #define GL_BGRA 0x80E1
 
 static DataStruct * globalfVMS = new DataStruct();
+static MotorManager * MotorManager1 = new MotorManager(0);
+static MotorManager * MotorManager2 = new MotorManager(0);
+static MotorManager * MotorManager3 = new MotorManager(0);
+static const bool comms = false;
 
 class Kinect_ImProc
 {

@@ -153,6 +153,7 @@
     <ClInclude Include="Communications.h" />
     <ClInclude Include="DataStruct.h" />
     <ClInclude Include="Kinect_ImProc.h" />
+    <ClInclude Include="MotorManager.h" />
     <ClInclude Include="Peaches_Main.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="Communications.cpp" />
     <ClCompile Include="DataStruct.cpp" />
     <ClCompile Include="Kinect_ImProc.cpp" />
+    <ClCompile Include="MotorManager.cpp" />
     <ClCompile Include="Peaches_Main.cpp" />
     <ClCompile Include="Peaches__CLR2.cpp" />
     <ClCompile Include="stdafx.cpp">

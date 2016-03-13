@@ -305,7 +305,6 @@ int Kinect_ImProc::getCenterOfPeach()
 			int wz = i % 640;
 			w += i%640;
 			h += (i - wz)/640;
-
 		}
 	}
 	if (counter != 0)

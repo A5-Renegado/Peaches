@@ -41,16 +41,32 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 	//Connect to the Kinect. If fail, exit.
 	if (!image_processing->initKinect()) return 0;
 
-	
+	Communications^ test_Comms;
 	//Initiate Comms
-	Communications^ test_Comms = gcnew Communications();
+	if (comms)
+	{
+		test_Comms = gcnew Communications();
+	}
 	//Start Main Loop (use Glut Main loop for pre-prepared multi-threading and image output prep)
 	glutMainLoop();
 	//Close port communications once they are complete
-	test_Comms->PortM1->Close();
-	test_Comms->PortM2->Close();
-	test_Comms->PortM3->Close();
-	test_Comms->PortP1->Close();
+	if (m1connected)
+	{
+		test_Comms->PortM1->Close();
+	}
+	if (m2connected)
+	{
+		test_Comms->PortM2->Close();
+	}
+	if (m3connected)
+	{
+		test_Comms->PortM3->Close();
+	}
+	if (p1connected)
+	{
+		test_Comms->PortP1->Close();
+	}
+
 	return 1;
 }
 
@@ -81,6 +97,9 @@ void draw()
 	int pix = 0;
 	//Find the center of the peach
 	pix = image_processing->getCenterOfPeach();
+	image_processing->data[pix * 4] = static_cast<GLubyte>(0.f);
+	image_processing->data[pix * 4 + 1] = static_cast<GLubyte>(0.f);
+	image_processing->data[pix * 4 + 1] = static_cast<GLubyte>(0.f);
 	std::cout << pix << std::endl;
 	if (pix >= 0)
 	{
@@ -111,9 +130,39 @@ void draw()
 	glEnd();
 	glutSwapBuffers();
 	Communications^ test_Comms = gcnew Communications(true);
+	if (globalfVMS->getm1m() || globalfVMS->getm2m() || globalfVMS->getm3m())
+	{
+		test_Comms->setMoving(true);
+	}
+	else
+	{
+		test_Comms->setMoving(false);
+	}
+	test_Comms->setOpen(globalfVMS->getgo());
+	MotorManager1->update_current(globalfVMS->getandclearm1());
+	MotorManager2->update_current(globalfVMS->getandclearm2());
+	MotorManager3->update_current(globalfVMS->getandclearm3());
+	test_Comms->setTargetAngles(image_processing->position);
+	MotorManager1->set_target_value(test_Comms->gett1(), 1);
+	MotorManager2->set_target_value(test_Comms->gett2(), 1);
+	MotorManager3->set_target_value(test_Comms->gett3(), 1);
 
-	test_Comms->PortM1->Close();
-	test_Comms->PortM2->Close();
-	test_Comms->PortM3->Close();
-	test_Comms->PortP1->Close();
+	//Need to set all values before this!
+	test_Comms->sendCommands();
+	if (m1connected)
+	{
+		test_Comms->PortM1->Close();
+	}
+	if (m2connected)
+	{
+		test_Comms->PortM2->Close();
+	}
+	if (m3connected)
+	{
+		test_Comms->PortM3->Close();
+	}
+	if (p1connected)
+	{
+		test_Comms->PortP1->Close();
+	}
 }

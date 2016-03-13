@@ -127,10 +127,55 @@ void DataStruct::setm3c(float x)
 	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
 	motor3change = x;
 }
+void DataStruct::upm1c(float x)
+{
+	System::Object^ m_lock = gcnew System::Object();
+	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	motor1change += x;
+}
+void DataStruct::upm2c(float x)
+{
+	System::Object^ m_lock = gcnew System::Object();
+	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	motor2change += x;
+}
+
+void DataStruct::upm3c(float x)
+{
+	System::Object^ m_lock = gcnew System::Object();
+	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	motor3change += x;
+}
 
 void DataStruct::setgo(bool x)
 {
 	System::Object^ m_lock = gcnew System::Object();
 	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
 	gripperOpen = x;
+}
+
+float DataStruct::getandclearm1()
+{
+	System::Object^ m_lock = gcnew System::Object();
+	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	float temp = motor1change;
+	motor1change = 0;
+	return temp;
+}
+
+float DataStruct::getandclearm2()
+{
+	System::Object^ m_lock = gcnew System::Object();
+	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	float temp = motor2change;
+	motor2change = 0;
+	return temp;
+}
+float DataStruct::getandclearm3()
+{
+	System::Object^ m_lock = gcnew System::Object();
+	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	float temp = motor3change;
+	motor3change = 0;
+	return temp;
 }

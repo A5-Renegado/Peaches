@@ -13,7 +13,7 @@ void Communications::DataReceivedHandler1(Object^ sender, System::IO::Ports::Ser
 
 	if (strspn(s.c_str(), "-.0123456789") == s.size())
 	{
-		globalfVMS->setm1c(stof(s));
+		globalfVMS->upm1c(stof(s));
 	}
 	else if (s.compare("M") == 0)
 	{
@@ -36,7 +36,7 @@ void Communications::DataReceivedHandler2(Object^ sender, System::IO::Ports::Ser
 	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
 	if (strspn(s.c_str(), "-.0123456789") == s.size())
 	{
-		globalfVMS->setm2c(stof(s));
+		globalfVMS->upm2c(stof(s));
 	}
 	else if (s.compare("M") == 0)
 	{
@@ -59,7 +59,7 @@ void Communications::DataReceivedHandler3(Object^ sender, System::IO::Ports::Ser
 	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
 	if (strspn(s.c_str(), "-.0123456789") == s.size())
 	{
-		globalfVMS->setm3c(stof(s));
+		globalfVMS->upm3c(stof(s));
 	}
 	else if (s.compare("M") == 0)
 	{
@@ -91,86 +91,112 @@ void Communications::DataReceivedHandlerP(Object^ sender, System::IO::Ports::Ser
 
 Communications::Communications()
 {
+	ok = true;
 	vFMS->setValues();
-	PortM1 = gcnew System::IO::Ports::SerialPort("COM3");
-	PortM1->BaudRate = 9600;
-	PortM1->Parity = System::IO::Ports::Parity::None;
-	PortM1->StopBits = System::IO::Ports::StopBits::One;
-	PortM1->DataBits = 8;
-	PortM1->Handshake = System::IO::Ports::Handshake::None;
-	PortM1->RtsEnable = true;
-	PortM1->DataReceived += gcnew System::IO::Ports::SerialDataReceivedEventHandler(DataReceivedHandler1);
-	PortM1->Open();
+	String^ m1 = gcnew String(motor1port);
+	String^ m2 = gcnew String(motor2port);
+	String^ m3 = gcnew String(motor3port);
+	String^ p1 = gcnew String(pumpport);
 
-	PortM2 = gcnew System::IO::Ports::SerialPort("COM4");
-	PortM2->BaudRate = 9600;
-	PortM2->Parity = System::IO::Ports::Parity::None;
-	PortM2->StopBits = System::IO::Ports::StopBits::One;
-	PortM2->DataBits = 8;
-	PortM2->Handshake = System::IO::Ports::Handshake::None;
-	PortM2->RtsEnable = true;
-	PortM2->DataReceived += gcnew System::IO::Ports::SerialDataReceivedEventHandler(DataReceivedHandler2);
-	PortM2->Open();
-
-	PortM3 = gcnew System::IO::Ports::SerialPort("COM5");
-	PortM3->BaudRate = 9600;
-	PortM3->Parity = System::IO::Ports::Parity::None;
-	PortM3->StopBits = System::IO::Ports::StopBits::One;
-	PortM3->DataBits = 8;
-	PortM3->Handshake = System::IO::Ports::Handshake::None;
-	PortM3->RtsEnable = true;
-	PortM3->DataReceived += gcnew System::IO::Ports::SerialDataReceivedEventHandler(DataReceivedHandler3);
-	PortM3->Open();
-
-	PortP1 = gcnew System::IO::Ports::SerialPort("COM6");
-	PortP1->BaudRate = 9600;
-	PortP1->Parity = System::IO::Ports::Parity::None;
-	PortP1->StopBits = System::IO::Ports::StopBits::One;
-	PortP1->DataBits = 8;
-	PortP1->Handshake = System::IO::Ports::Handshake::None;
-	PortP1->RtsEnable = true;
-	PortP1->DataReceived += gcnew System::IO::Ports::SerialDataReceivedEventHandler(DataReceivedHandlerP);
-	PortP1->Open();
+	if (m1connected)
+	{
+		PortM1 = gcnew System::IO::Ports::SerialPort(m1);
+		PortM1->BaudRate = 9600;
+		PortM1->Parity = System::IO::Ports::Parity::None;
+		PortM1->StopBits = System::IO::Ports::StopBits::One;
+		PortM1->DataBits = 8;
+		PortM1->Handshake = System::IO::Ports::Handshake::None;
+		PortM1->RtsEnable = true;
+		PortM1->Open();
+	}
+	if (m2connected)
+	{
+		PortM2 = gcnew System::IO::Ports::SerialPort(m2);
+		PortM2->BaudRate = 9600;
+		PortM2->Parity = System::IO::Ports::Parity::None;
+		PortM2->StopBits = System::IO::Ports::StopBits::One;
+		PortM2->DataBits = 8;
+		PortM2->Handshake = System::IO::Ports::Handshake::None;
+		PortM2->RtsEnable = true;
+		PortM2->Open();
+	}
+	if (m3connected)
+	{
+		PortM3 = gcnew System::IO::Ports::SerialPort(m3);
+		PortM3->BaudRate = 9600;
+		PortM3->Parity = System::IO::Ports::Parity::None;
+		PortM3->StopBits = System::IO::Ports::StopBits::One;
+		PortM3->DataBits = 8;
+		PortM3->Handshake = System::IO::Ports::Handshake::None;
+		PortM3->RtsEnable = true;
+		PortM3->Open();
+	}
+	if (p1connected)
+	{
+		PortP1 = gcnew System::IO::Ports::SerialPort(p1);
+		PortP1->BaudRate = 9600;
+		PortP1->Parity = System::IO::Ports::Parity::None;
+		PortP1->StopBits = System::IO::Ports::StopBits::One;
+		PortP1->DataBits = 8;
+		PortP1->Handshake = System::IO::Ports::Handshake::None;
+		PortP1->RtsEnable = true;
+		PortP1->Open();
+	}
 }
 
 Communications::Communications(bool check)
 {
+	ok = true;
 	vFMS->setValues();
-	PortM1 = gcnew System::IO::Ports::SerialPort("COM3");
-	PortM1->BaudRate = 9600;
-	PortM1->Parity = System::IO::Ports::Parity::None;
-	PortM1->StopBits = System::IO::Ports::StopBits::One;
-	PortM1->DataBits = 8;
-	PortM1->Handshake = System::IO::Ports::Handshake::None;
-	PortM1->RtsEnable = true;
-	PortM1->Open();
+	String^ m1 = gcnew String(motor1port);
+	String^ m2 = gcnew String(motor2port);
+	String^ m3 = gcnew String(motor3port);
+	String^ p1 = gcnew String(pumpport);
 
-	PortM2 = gcnew System::IO::Ports::SerialPort("COM4");
-	PortM2->BaudRate = 9600;
-	PortM2->Parity = System::IO::Ports::Parity::None;
-	PortM2->StopBits = System::IO::Ports::StopBits::One;
-	PortM2->DataBits = 8;
-	PortM2->Handshake = System::IO::Ports::Handshake::None;
-	PortM2->RtsEnable = true;
-	PortM2->Open();
-
-	PortM3 = gcnew System::IO::Ports::SerialPort("COM5");
-	PortM3->BaudRate = 9600;
-	PortM3->Parity = System::IO::Ports::Parity::None;
-	PortM3->StopBits = System::IO::Ports::StopBits::One;
-	PortM3->DataBits = 8;
-	PortM3->Handshake = System::IO::Ports::Handshake::None;
-	PortM3->RtsEnable = true;
-	PortM3->Open();
-
-	PortP1 = gcnew System::IO::Ports::SerialPort("COM6");
-	PortP1->BaudRate = 9600;
-	PortP1->Parity = System::IO::Ports::Parity::None;
-	PortP1->StopBits = System::IO::Ports::StopBits::One;
-	PortP1->DataBits = 8;
-	PortP1->Handshake = System::IO::Ports::Handshake::None;
-	PortP1->RtsEnable = true;
-	PortP1->Open();
+	if (m1connected)
+	{
+		PortM1 = gcnew System::IO::Ports::SerialPort(m1);
+		PortM1->BaudRate = 9600;
+		PortM1->Parity = System::IO::Ports::Parity::None;
+		PortM1->StopBits = System::IO::Ports::StopBits::One;
+		PortM1->DataBits = 8;
+		PortM1->Handshake = System::IO::Ports::Handshake::None;
+		PortM1->RtsEnable = true;
+		PortM1->Open();
+	}
+	if (m2connected)
+	{
+		PortM2 = gcnew System::IO::Ports::SerialPort(m2);
+		PortM2->BaudRate = 9600;
+		PortM2->Parity = System::IO::Ports::Parity::None;
+		PortM2->StopBits = System::IO::Ports::StopBits::One;
+		PortM2->DataBits = 8;
+		PortM2->Handshake = System::IO::Ports::Handshake::None;
+		PortM2->RtsEnable = true;
+		PortM2->Open();
+	}
+	if (m3connected)
+	{
+		PortM3 = gcnew System::IO::Ports::SerialPort(m3);
+		PortM3->BaudRate = 9600;
+		PortM3->Parity = System::IO::Ports::Parity::None;
+		PortM3->StopBits = System::IO::Ports::StopBits::One;
+		PortM3->DataBits = 8;
+		PortM3->Handshake = System::IO::Ports::Handshake::None;
+		PortM3->RtsEnable = true;
+		PortM3->Open();
+	}
+	if (p1connected)
+	{
+		PortP1 = gcnew System::IO::Ports::SerialPort(p1);
+		PortP1->BaudRate = 9600;
+		PortP1->Parity = System::IO::Ports::Parity::None;
+		PortP1->StopBits = System::IO::Ports::StopBits::One;
+		PortP1->DataBits = 8;
+		PortP1->Handshake = System::IO::Ports::Handshake::None;
+		PortP1->RtsEnable = true;
+		PortP1->Open();
+	}
 }
 
 DataStruct * Communications::getVals()
@@ -179,14 +205,15 @@ DataStruct * Communications::getVals()
 	return vFMS;
 }
 
-void Communications::listenToPort()
+void Communications::setTargetAngles(ThreeDPos * location)
 {
-	int i = 0;
-	if (i % 100000000 == 0)
-	{
-		std::cout << i << " Testing My new Thread" << std::endl;
-	}
-	i++;
+	theta3target = atan(location->getX() / location->getZ());
+	theta2target = acos((pow(L2, 2) + pow(L3, 2) - (pow(location->getY(),2) + pow(location->getZ(),2)))/(location->getZ()*L2*L3));
+	theta1target = 90 + atan(location->getY() / location->getZ()) - acos((pow(L2,2) + pow(location->getY(),2) + pow(location->getZ(),2) - pow(L3,2))/(location->getZ() * L2 * sqrt(pow(location->getY(),2)+pow(location->getZ(),2))));
+}
+
+void Communications::doActions()
+{
 	if (!ok)
 	{
 		status = commandHalt();
@@ -201,12 +228,12 @@ void Communications::listenToPort()
 	}
 	else if (!open && psensors)
 	{
-		status = commandSetDirectionM1(true);
-		status = commandSetDirectionM2(true);
-		status = commandSetDirectionM3(true);
-		status = commandSetCountsM1(0);
-		status = commandSetCountsM2(0);
-		status = commandSetCountsM3(0);
+		status = commandSetDirectionM1(MotorManager1->get_direction());
+		status = commandSetDirectionM2(MotorManager2->get_direction());
+		status = commandSetDirectionM3(MotorManager3->get_direction());
+		status = commandSetCountsM1(abs(MotorManager1->get_move_count()));
+		status = commandSetCountsM2(abs(MotorManager2->get_move_count()));
+		status = commandSetCountsM3(abs(MotorManager3->get_move_count()));
 		status = commandExecuteAction();
 	}
 	else if (open && psensors && atPeach && thereisapeach)
@@ -215,22 +242,22 @@ void Communications::listenToPort()
 	}
 	else if (thereisapeach)
 	{
-		status = commandSetDirectionM1(true);
-		status = commandSetDirectionM2(true);
-		status = commandSetDirectionM3(true);
-		status = commandSetCountsM1(0);
-		status = commandSetCountsM2(0);
-		status = commandSetCountsM3(0);
+		status = commandSetDirectionM1(MotorManager1->get_direction());
+		status = commandSetDirectionM2(MotorManager2->get_direction());
+		status = commandSetDirectionM3(MotorManager3->get_direction());
+		status = commandSetCountsM1(abs(MotorManager1->get_move_count()));
+		status = commandSetCountsM2(abs(MotorManager2->get_move_count()));
+		status = commandSetCountsM3(abs(MotorManager3->get_move_count()));
 		status = commandExecuteAction();
 	}
 	else
 	{
-		status = commandSetDirectionM1(true);
-		status = commandSetDirectionM2(true);
-		status = commandSetDirectionM3(true);
-		status = commandSetCountsM1(0);
-		status = commandSetCountsM2(0);
-		status = commandSetCountsM3(0);
+		status = commandSetDirectionM1(MotorManager1->get_direction());
+		status = commandSetDirectionM2(MotorManager2->get_direction());
+		status = commandSetDirectionM3(MotorManager3->get_direction());
+		status = commandSetCountsM1(abs(MotorManager1->get_move_count()));
+		status = commandSetCountsM2(abs(MotorManager2->get_move_count()));
+		status = commandSetCountsM3(abs(MotorManager3->get_move_count()));
 		status = commandExecuteAction();
 	}
 	return;
@@ -238,42 +265,119 @@ void Communications::listenToPort()
 
 int Communications::commandOpen()
 {
+	if (p1connected)
+	{
+		PortP1->Write("O");
+	}
 	return 0;
 }
 int Communications::commandClose()
 {
+	if (p1connected)
+	{
+		PortP1->Write("C");
+	}
 	return 0;
 }
 int Communications::commandSetDirectionM1(bool left)
 {
+	if (m1connected)
+	{
+		if (left)
+		{
+			PortM1->Write("L");
+		}
+		else
+		{
+			PortM1->Write("R");
+		}
+	}
 	return 0;
 }
 int Communications::commandSetDirectionM2(bool left)
 {
+	if (m2connected)
+	{
+		if (left)
+		{
+			PortM2->Write("L");
+		}
+		else
+		{
+			PortM2->Write("R");
+		}
+	}
 	return 0;
 }
 int Communications::commandSetDirectionM3(bool left)
 {
+	if (m3connected)
+	{
+		if (left)
+		{
+			PortM3->Write("L");
+		}
+		else
+		{
+			PortM3->Write("R");
+		}
+	}
 	return 0;
 }
 int Communications::commandSetCountsM1(int numCounts)
 {
+	if (m1connected)
+	{
+		PortM1->Write(System::Convert::ToString(numCounts));
+	}
 	return 0;
 }
 int Communications::commandSetCountsM2(int numCounts)
 {
+	if (m2connected)
+	{
+		PortM2->Write(System::Convert::ToString(numCounts));
+	}
 	return 0;
 }
 int Communications::commandSetCountsM3(int numCounts)
 {
+	if (m3connected)
+	{
+		PortM3->Write(System::Convert::ToString(numCounts));
+	}
 	return 0;
 }
 int Communications::commandExecuteAction()
 {
+	if (m1connected)
+	{
+		PortM1->Write("G");
+	}
+	if (m2connected)
+	{
+		PortM2->Write("G");
+	}
+	if (m3connected)
+	{
+		PortM3->Write("G");
+	}
 	return 0;
 }
 int Communications::commandHalt()
 {
+	if (m1connected)
+	{
+		PortM1->Write("H");
+	}
+	if (m2connected)
+	{
+		PortM2->Write("H");
+	}
+	if (m3connected)
+	{
+		PortM3->Write("H");
+	}
 	return 0;
 }
 int Communications::calculateMovements()
