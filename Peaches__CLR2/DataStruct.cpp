@@ -4,8 +4,8 @@
 
 DataStruct::DataStruct()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
 	motor1moving = false;
 	motor2moving = false;
 	motor3moving = false;
@@ -13,12 +13,40 @@ DataStruct::DataStruct()
 	motor1change = 0;
 	motor2change = 0;
 	motor3change = 0;
+	inuse = false;
+}
+
+void DataStruct::setSensor(int x)
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
+	forceSensorInput = x;
+	inuse = false;
+}
+
+int DataStruct::getSensor()
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	//inuse = true;
+	return forceSensorInput;
 }
 
 void DataStruct::setValues()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor1moving = false;
 	motor2moving = false;
 	motor3moving = false;
@@ -26,13 +54,18 @@ void DataStruct::setValues()
 	motor1change = 0;
 	motor2change = 0;
 	motor3change = 0;
+	inuse = false;
 	return;
 }
 
 void DataStruct::setValues(DataStruct * replacement)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor1moving = replacement->motor1moving;
 	motor2moving = replacement->motor2moving;
 	motor3moving = replacement->motor3moving;
@@ -40,142 +73,230 @@ void DataStruct::setValues(DataStruct * replacement)
 	motor1change = replacement->motor1change;
 	motor2change = replacement->motor2change;
 	motor3change = replacement->motor3change;
+	inuse = false;
 	return;
 }
 
 bool DataStruct::getm1m()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return motor1moving;
 }
 
 bool DataStruct::getm2m()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return motor2moving;
 }
 bool DataStruct::getm3m()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return motor3moving;
 }
 float DataStruct::getm1c()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return motor1change;
 }
 float DataStruct::getm2c()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return motor2change;
 }
 
 float DataStruct::getm3c()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return motor3change;
 }
 
 bool DataStruct::getgo()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
 	return gripperOpen;
 }
 
 void DataStruct::setm1m(bool x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor1moving = x;
+	inuse = false;
 }
 
 void DataStruct::setm2m(bool x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor2moving = x;
+	inuse = false;
 }
 void DataStruct::setm3m(bool x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor3moving = x;
+	inuse = false;
 }
 void DataStruct::setm1c(float x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor1change = x;
+	inuse = false;
 }
 void DataStruct::setm2c(float x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor2change = x;
+	inuse = false;
 }
 
 void DataStruct::setm3c(float x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor3change = x;
+	inuse = false;
 }
 void DataStruct::upm1c(float x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor1change += x;
+	inuse = false;
+	
 }
 void DataStruct::upm2c(float x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor2change += x;
+	inuse = false;
 }
 
 void DataStruct::upm3c(float x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	motor3change += x;
+	inuse = false;
 }
 
 void DataStruct::setgo(bool x)
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	gripperOpen = x;
+	inuse = false;
 }
 
 float DataStruct::getandclearm1()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	float temp = motor1change;
 	motor1change = 0;
+	inuse = false;
 	return temp;
 }
 
 float DataStruct::getandclearm2()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	float temp = motor2change;
 	motor2change = 0;
+	inuse = false;
 	return temp;
 }
 float DataStruct::getandclearm3()
 {
-	System::Object^ m_lock = gcnew System::Object();
-	msclr::lock^ getLock = gcnew msclr::lock(m_lock);
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
 	float temp = motor3change;
 	motor3change = 0;
+	inuse = false;
 	return temp;
 }

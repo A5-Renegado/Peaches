@@ -21,7 +21,7 @@ Kinect_ImProc::Kinect_ImProc(bool debug)
 {
 	debug_mode = debug;
 	//redmin = 0.5568627;
-	redmin = 200.0/255.0;
+	redmin = 180.0/255.0;
 	//redmax = 0.9568627;
 	redmax = 1.0;
 	//greenmin = 0.3490196;
@@ -104,7 +104,7 @@ void Kinect_ImProc::getRgbData(GLubyte* dest, GLubyte* dest2)
 	texture->LockRect(0, &LockedRect, NULL, 0);
 	if (LockedRect.Pitch != 0)
 	{
-		std::cout << "Doing stuff" << std::endl;
+		//std::cout << "Doing stuff" << std::endl;
 		const BYTE* curr = (const BYTE*)LockedRect.pBits;
 		const BYTE* start = (const BYTE*)LockedRect.pBits;
 		
@@ -206,16 +206,22 @@ void Kinect_ImProc::setCounter(int count)
 bool Kinect_ImProc::checkImage()
 {
 	bool peaches = false;
+	thereisapeach = false;
 	for (int i = 0; i < width*height; i++)
 	{
 		int isPixel = checkPixel(colorarray[i * 3], colorarray[i * 3 + 1], colorarray[i * 3 + 2]);
 		if (isPixel == 1)
 		{
+			int j = i;
+			//if (j < (height*width) - (13 * (width+1)))
+			//{
+			//	j += 13 * (width+1);
+			//}
 			peaches = true;
 			thereisapeach = true;
-			data[i * 4] = static_cast<GLubyte>(255.f);
-			data[i * 4 + 1] = static_cast<GLubyte>(255.f);
-			data[i * 4 + 2] = static_cast<GLubyte>(255.f);
+			data[j * 4] = static_cast<GLubyte>(255.f);
+			data[j * 4 + 1] = static_cast<GLubyte>(255.f);
+			data[j * 4 + 2] = static_cast<GLubyte>(255.f);
 		}
 		locationpeaches[i] = isPixel;
 	}
@@ -315,25 +321,25 @@ int Kinect_ImProc::getCenterOfPeach()
 	{
 		pix = 0;
 	}
-	std::cout << h << " " << w << " " << counter << std::endl;
+	//std::cout << h << " " << w << " " << counter << std::endl;
 	return pix-1;
 }
 
 void Kinect_ImProc::setPositionValues(int pix)
 {
-	int w = (pix+1)%640;
-	int h = ((pix + 1) -w)/640;
-	double z = vertexarray[pix];
-	double psize = estimatePixelSize(z);
-	double x = psize*(h - 319.5);
-	double y = psize*(w - 239.5);
+	int w = (pix+14)%640;
+	int h = ((pix + 14) -w)/640;
+	double z = vertexarray[pix+13];
+	double psize = (double)estimatePixelSize(z);
+	double x = -1 * psize * (h - 319.5);
+	double y = -1 * psize * (w - 239.5);
 	position->setX(x);
 	position->setY(y);
 	position->setZ(z);
-	if (debug_mode)
-	{
-		std::cout << x << " " << y << " " << z << std::endl;
-	}
+	//if (debug_mode)
+	//{
+		//std::cout << x << " " << y << " " << z << std::endl;
+	//}
 }
 
 //re-write this. Use Mutex's. This is just bad coding.

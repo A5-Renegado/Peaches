@@ -28,11 +28,11 @@ extern "C" {
 #define height 480
 #define GL_BGRA 0x80E1
 
-static DataStruct * globalfVMS = new DataStruct();
-static MotorManager * MotorManager1 = new MotorManager(0);
-static MotorManager * MotorManager2 = new MotorManager(0);
-static MotorManager * MotorManager3 = new MotorManager(0);
-static const bool comms = false;
+extern DataStruct * globalfVMS;// = new DataStruct();
+extern MotorManager * MotorManager1;// = new MotorManager(0);
+extern MotorManager * MotorManager2;// = new MotorManager(0);
+extern MotorManager * MotorManager3;// = new MotorManager(0);
+static const bool comms = true;
 
 class Kinect_ImProc
 {
@@ -80,4 +80,12 @@ private:
 	double bluemin;
 	double bluemax;
 };
-
+/*#ifndef MotorManager1
+MotorManager * MotorManager1;
+#endif
+#ifndef MotorManager2
+MotorManager * MotorManager2;
+#endif
+#ifndef MotorManager3
+MotorManager * MotorManager3;
+#endif*/

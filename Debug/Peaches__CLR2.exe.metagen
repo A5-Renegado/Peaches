@@ -15,14 +15,13 @@ Class Communications: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Interfaces:
     System.IDisposable
   Fields:
-    System.IO.Ports.SerialPort PortM1 : Public
-    System.IO.Ports.SerialPort PortM2 : Public
-    System.IO.Ports.SerialPort PortM3 : Public
-    System.IO.Ports.SerialPort PortP1 : Public
+    System.IO.Ports.SerialPort PortM1 : Public, Static
+    System.IO.Ports.SerialPort PortM2 : Public, Static
+    System.IO.Ports.SerialPort PortM3 : Public, Static
+    System.IO.Ports.SerialPort PortP1 : Public, Static
     System.Object m_lock : Public, Static
-    DataStruct* vFMS : Public, Static
+    Boolean initiated : Public, Static
   Methods:
-    getVals(): PrivateScope, Public, HideBySig
     getMoving(): PrivateScope, Public, HideBySig
     setMoving(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     setOpen(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
@@ -30,11 +29,13 @@ Class Communications: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     setAtDeposit(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     setAtPeach(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     setThereisapeach(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    setBadCoords(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     setTargetAngles(ThreeDPos*): PrivateScope, Public, HideBySig
     gett1(): PrivateScope, Public, HideBySig
     gett2(): PrivateScope, Public, HideBySig
     gett3(): PrivateScope, Public, HideBySig
     sendCommands(): PrivateScope, Public, HideBySig
+    endComms(): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Class Peaches_Main: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

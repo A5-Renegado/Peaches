@@ -17,6 +17,7 @@ public:
 	float getandclearm1();
 	float getandclearm2();
 	float getandclearm3();
+	int getSensor();
 
 	void setm1m(bool x);
 	void setm2m(bool x);
@@ -28,6 +29,7 @@ public:
 	void setm2c(float x);
 	void setm3c(float x);
 	void setgo(bool x);
+	void setSensor(int x);
 
 private:
 	bool motor1moving;
@@ -40,4 +42,10 @@ private:
 	int motor1count;
 	int motor2count;
 	int motor3count;
+	int forceSensorInput;
+	bool inuse;
+};
+
+ref class lockRef {
+	static lockRef^ _lockRef;
 };

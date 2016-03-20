@@ -2,11 +2,19 @@
 
 #include "stdafx.h"
 #include "Peaches_Main.h"
+#include <cstdlib>
 
 //using namespace System;
 
+void exiting()
+{
+	Communications^ myEndComms = gcnew Communications();
+	myEndComms->endComms();
+}
+
 int main(array<System::String ^> ^args)
 {
+	std::atexit(exiting);
 	Peaches_Main^ peach = gcnew Peaches_Main(true);
 	int i = peach->execute(args);
     return 0;

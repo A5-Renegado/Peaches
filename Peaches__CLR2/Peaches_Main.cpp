@@ -3,11 +3,20 @@
 
 //Create image processing instance
 Kinect_ImProc *image_processing = new Kinect_ImProc(true);
-//Communications^ test_Comms;// = gcnew Communications();
+DataStruct * globalfVMS = new DataStruct();
+MotorManager * MotorManager1 = new MotorManager(0, 0, 1.0);
+MotorManager * MotorManager2 = new MotorManager(0, 0, 1.0);
+MotorManager * MotorManager3 = new MotorManager(0, 0, 1.0);
+
+bool check_at_deposit()
+{
+	return abs(MotorManager1->get_current_angle() - theta1deposit) <= 50 && abs(MotorManager2->get_current_angle() - theta2deposit) <= 50 && abs(MotorManager3->get_current_angle() - theta3deposit) <= 50;
+}
 
 int Peaches_Main::execute(array<System::String ^> ^ argv)
 {
 	std::string test;
+	doinganything = false;
 	int end = 0;
 	
 	//Set up GLUT loop for drawing output
@@ -41,32 +50,14 @@ int Peaches_Main::execute(array<System::String ^> ^ argv)
 	//Connect to the Kinect. If fail, exit.
 	if (!image_processing->initKinect()) return 0;
 
-	Communications^ test_Comms;
 	//Initiate Comms
+	Communications::initiated = false;
 	if (comms)
 	{
-		test_Comms = gcnew Communications();
+		Communications::Communications();
 	}
 	//Start Main Loop (use Glut Main loop for pre-prepared multi-threading and image output prep)
 	glutMainLoop();
-	//Close port communications once they are complete
-	if (m1connected)
-	{
-		test_Comms->PortM1->Close();
-	}
-	if (m2connected)
-	{
-		test_Comms->PortM2->Close();
-	}
-	if (m3connected)
-	{
-		test_Comms->PortM3->Close();
-	}
-	if (p1connected)
-	{
-		test_Comms->PortP1->Close();
-	}
-
 	return 1;
 }
 
@@ -100,7 +91,7 @@ void draw()
 	image_processing->data[pix * 4] = static_cast<GLubyte>(0.f);
 	image_processing->data[pix * 4 + 1] = static_cast<GLubyte>(0.f);
 	image_processing->data[pix * 4 + 1] = static_cast<GLubyte>(0.f);
-	std::cout << pix << std::endl;
+	//std::cout << pix << std::endl;
 	if (pix >= 0)
 	{
 		//Store the position of the peach
@@ -130,39 +121,29 @@ void draw()
 	glEnd();
 	glutSwapBuffers();
 	Communications^ test_Comms = gcnew Communications(true);
-	if (globalfVMS->getm1m() || globalfVMS->getm2m() || globalfVMS->getm3m())
-	{
-		test_Comms->setMoving(true);
-	}
-	else
-	{
-		test_Comms->setMoving(false);
-	}
+	
+	test_Comms->setMoving(globalfVMS->getm1m() || globalfVMS->getm2m() || globalfVMS->getm3m());
+	
 	test_Comms->setOpen(globalfVMS->getgo());
+	test_Comms->setPsensors(globalfVMS->getSensor() >= 400);
+	test_Comms->setAtDeposit(check_at_deposit());
+
 	MotorManager1->update_current(globalfVMS->getandclearm1());
 	MotorManager2->update_current(globalfVMS->getandclearm2());
+	MotorManager3->apply_offset(((float)MotorManager2->get_move_count())/50.0);
 	MotorManager3->update_current(globalfVMS->getandclearm3());
 	test_Comms->setTargetAngles(image_processing->position);
-	MotorManager1->set_target_value(test_Comms->gett1(), 1);
+	MotorManager1->set_target_rotation(test_Comms->gett1());
+	std::cout << "Current Encoder Count: " << MotorManager2->get_current() << std::endl;
+	std::cout << "Sending move count to motor 2: " << MotorManager2->get_move_count() << std::endl;
 	MotorManager2->set_target_value(test_Comms->gett2(), 1);
 	MotorManager3->set_target_value(test_Comms->gett3(), 1);
+	test_Comms->setThereisapeach(image_processing->thereisapeach);
+	test_Comms->setBadCoords(image_processing->position->getZ() <= 100);
+
+	test_Comms->setAtPeach(MotorManager1->at_target() && MotorManager2->at_target() && MotorManager3->at_target());
 
 	//Need to set all values before this!
 	test_Comms->sendCommands();
-	if (m1connected)
-	{
-		test_Comms->PortM1->Close();
-	}
-	if (m2connected)
-	{
-		test_Comms->PortM2->Close();
-	}
-	if (m3connected)
-	{
-		test_Comms->PortM3->Close();
-	}
-	if (p1connected)
-	{
-		test_Comms->PortP1->Close();
-	}
 }
+
