@@ -109,7 +109,7 @@ void Communications::DataReceivedHandlerP(Object^ sender, System::IO::Ports::Ser
 	while (indata = sp->ReadLine())
 	{
 
-		msclr::interop::marshal_context context;
+		/*msclr::interop::marshal_context context;
 		std::string s = context.marshal_as<std::string>(indata);
 		msclr::lock^ getLock = gcnew msclr::lock(m_lock);
 		s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
@@ -128,7 +128,7 @@ void Communications::DataReceivedHandlerP(Object^ sender, System::IO::Ports::Ser
 		else if (!s.empty() && s.find_first_not_of("-0123456789") == std::string::npos)
 		{
 			globalfVMS->setSensor(stoi(s));
-		}
+		}*/
 	}
 }
 
@@ -318,7 +318,7 @@ void Communications::doActions()
 	{
 		std::cout << "The coordinates are bad" << std::endl;
 	}
-	else if (!open && psensors && atDeposit)
+	else if (!open && atDeposit)
 	{
 		status = commandOpen();
 		Sleep(2000);
@@ -329,7 +329,7 @@ void Communications::doActions()
 		status = commandSetCountsM2(MotorManager2->get_move_count());
 		std::cout << "Depositing and returning to main position" << std::endl;
 	}
-	else if (!open && psensors)
+	else if (!open)
 	{
 		MotorManager1->set_target_value(theta1deposit, 1);
 		MotorManager2->set_target_value(theta2deposit, 1);
@@ -343,19 +343,29 @@ void Communications::doActions()
 		Sleep(500);
 		std::cout << "Moving to deposit" << std::endl;
 	}
-	else if (open && atPeach && thereisapeach)  // &&psensors?
+	else if (open && atPeach)  // &&psensors?
 	{
 		status = commandClose();
 		std::cout << "closing claw" << std::endl;
 	}
+	else if (bad_coordinates)// && !open && !thereisapeach)
+	{
+		std::cout << "The coordinates are bad" << std::endl;
+	}
 	else if (thereisapeach)
 	{
+		MotorManager1->set_target_rotation(gett1());
+		MotorManager2->set_target_value(gett2(), 1);
+		std::cout << "Current Encoder Count: " << MotorManager2->get_current() << std::endl;
+		std::cout << "Sending move count to motor 2: " << MotorManager2->get_move_count() << std::endl;
+		MotorManager3->set_target_value(gett3(), 1);
 		status = commandSetCountsM1(MotorManager1->get_move_count());
 		status = commandSetCountsM3(MotorManager3->get_move_count());
 		Sleep(2000);
 		status = commandSetCountsM2(MotorManager2->get_move_count());
 		Sleep(500);
 		std::cout << "moving to peach" << std::endl;
+		//counter = 0;
 	}
 	else
 	{
@@ -535,6 +545,7 @@ void Communications::endComms()
 	commandSetCountsM1(0);
 	commandSetCountsM2(0);
 	commandSetCountsM3(0);
+	commandOpen();
 	wait();
 	if (m1connected)
 	{
