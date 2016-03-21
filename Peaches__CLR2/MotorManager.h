@@ -16,7 +16,7 @@ static const float theta2start = 90.0;
 static const float theta3start = 180.0;
 static const float theta1deposit = 0;
 static const float theta2deposit = 0;
-static const float theta3deposit = 0;
+static const float theta3deposit = -90.0;
 
 //The purpose of this class is to recieve data input which represents the 
 

@@ -76,29 +76,32 @@ void Communications::DataReceivedHandler2(Object^ sender, System::IO::Ports::Ser
 void Communications::DataReceivedHandler3(Object^ sender, System::IO::Ports::SerialDataReceivedEventArgs^ e)
 {
 	System::IO::Ports::SerialPort^ sp = (System::IO::Ports::SerialPort^)sender;
-	System::String^ indata = sp->ReadLine();
-	
-	msclr::interop::marshal_context context;
-	std::string s = context.marshal_as<std::string>(indata);
-	s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
-	std::cout << "I heard from Motor 3: " << s << std::endl;
-	s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
-	std::string::const_iterator it = s.begin();
+	System::String^ indata;
+	while (indata = sp->ReadLine())
+	{
 
-	if (!s.empty() && s.find_first_not_of("-.0123456789") == std::string::npos)
-	{
-		globalfVMS->upm3c(stof(s));
-	}
-	else if (s[0] == 'm')
-	{
-		globalfVMS->setm3m(true);
-		std::cout << "I got moving from Motor 3" << std::endl;
-	}
-	else if (s[0] =='s')
-	{
-		globalfVMS->setm3m(false);
-		globalfVMS->setm3c(globalfVMS->gett3());
-		std::cout << "I got stopped from Motor 3" << std::endl;
+		msclr::interop::marshal_context context;
+		std::string s = context.marshal_as<std::string>(indata);
+		s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
+		std::cout << "I heard from Motor 3: " << s << std::endl;
+		s.erase(std::remove(s.begin(), s.end(), '\n'), s.end());
+		std::string::const_iterator it = s.begin();
+
+		if (!s.empty() && s.find_first_not_of("-.0123456789") == std::string::npos)
+		{
+			globalfVMS->upm3c(stof(s));
+		}
+		else if (s[0] == 'm')
+		{
+			globalfVMS->setm3m(true);
+			std::cout << "I got moving from Motor 3" << std::endl;
+		}
+		else if (s[0] == 's')
+		{
+			globalfVMS->setm3m(false);
+			globalfVMS->setm3c(globalfVMS->gett3());
+			std::cout << "I got stopped from Motor 3" << std::endl;
+		}
 	}
 }
 
@@ -142,6 +145,7 @@ Communications::Communications()
 	String^ p1 = gcnew String(pumpport);
 	if (!initiated)
 	{
+		open = true;
 		if (m1connected)
 		{
 			PortM1 = gcnew System::IO::Ports::SerialPort(m1);
@@ -195,8 +199,7 @@ Communications::Communications()
 			PortP1->Handshake = System::IO::Ports::Handshake::None;
 			PortP1->RtsEnable = true;
 			PortP1->Open();
-			PortP1->DataReceived += gcnew SerialDataReceivedEventHandler(DataReceivedHandlerP);
-			std::cout << "Should be connected to pump port now." << std::endl;
+			//PortP1->DataReceived += gcnew SerialDataReceivedEventHandler(DataReceivedHandlerP);
 		}
 		std::cout << "Should be connected to all active ports now." << std::endl;
 		wait();
@@ -261,7 +264,7 @@ Communications::Communications(bool check)
 			PortP1->Handshake = System::IO::Ports::Handshake::None;
 			PortP1->RtsEnable = true;
 			PortP1->Open();
-			PortP1->DataReceived += gcnew SerialDataReceivedEventHandler(DataReceivedHandlerP);
+			//PortP1->DataReceived += gcnew SerialDataReceivedEventHandler(DataReceivedHandlerP);
 		}
 		std::cout << "This should be connected to all available ports now." << std::endl;
 		wait();
@@ -303,8 +306,36 @@ void Communications::doActions()
 	//{
 	//}
 	//else
+	/*if (open)
+	{
+		std::cout << "Open" << std::endl;
+	}
+	else
+	{
+		std::cout << "Close" << std::endl;
+	}
+	if (atPeach)
+	{
+		std::cout << "At Peach" << std::endl;
+	}
+	else
+	{
+		std::cout << "Not at Peach" << std::endl;
+	}
+	if (atDeposit)
+	{
+		std::cout << "At deposit" << std::endl;
+	}
+	else
+	{
+		std::cout << "Not at deposit" << std::endl;
+	}*/
 	
-	last_moving = false;
+	//last_moving = false;
+
+	std::cout << "Theta 3 at: " << globalfVMS->getm3c() << std::endl;
+	std::cout << "Theta 2 at: " << globalfVMS->getm2c() << std::endl;
+
 	if (!ok)
 	{
 		status = commandHalt();
@@ -314,14 +345,10 @@ void Communications::doActions()
 		std::cout << "A motor is moving" << std::endl;
 		last_moving = true;
 	}
-	else if (bad_coordinates)// && !open && !thereisapeach)
-	{
-		std::cout << "The coordinates are bad" << std::endl;
-	}
 	else if (!open && atDeposit)
 	{
 		status = commandOpen();
-		Sleep(2000);
+		Sleep(500);
 		MotorManager2->set_target_value(60.0, 1);
 		MotorManager3->apply_absolute_offset(60.0);
 		MotorManager3->set_target_value(-135.0, 1);
@@ -338,15 +365,15 @@ void Communications::doActions()
 
 		status = commandSetCountsM1(MotorManager1->get_move_count());
 		status = commandSetCountsM3(MotorManager3->get_move_count());
-		Sleep(2000);
+		Sleep(500);
 		status = commandSetCountsM2(MotorManager2->get_move_count());
 		Sleep(500);
 		std::cout << "Moving to deposit" << std::endl;
 	}
 	else if (open && atPeach)  // &&psensors?
 	{
-		status = commandClose();
 		std::cout << "closing claw" << std::endl;
+		status = commandClose();
 	}
 	else if (bad_coordinates)// && !open && !thereisapeach)
 	{
@@ -356,12 +383,10 @@ void Communications::doActions()
 	{
 		MotorManager1->set_target_rotation(gett1());
 		MotorManager2->set_target_value(gett2(), 1);
-		std::cout << "Current Encoder Count: " << MotorManager2->get_current() << std::endl;
-		std::cout << "Sending move count to motor 2: " << MotorManager2->get_move_count() << std::endl;
 		MotorManager3->set_target_value(gett3(), 1);
 		status = commandSetCountsM1(MotorManager1->get_move_count());
 		status = commandSetCountsM3(MotorManager3->get_move_count());
-		Sleep(2000);
+		Sleep(500);
 		status = commandSetCountsM2(MotorManager2->get_move_count());
 		Sleep(500);
 		std::cout << "moving to peach" << std::endl;
@@ -374,7 +399,7 @@ void Communications::doActions()
 		MotorManager3->set_target_rotation(0);
 		status = commandSetCountsM1(MotorManager1->get_move_count());
 		status = commandSetCountsM3(MotorManager3->get_move_count());
-		Sleep(2000);
+		Sleep(500);
 		status = commandSetCountsM2(MotorManager2->get_move_count());
 		Sleep(500);
 		std::cout << "rotating" << std::endl;
@@ -509,7 +534,7 @@ int commandExecuteAction()
 	{
 		Communications::PortM3->Write("G\n");
 	}
-	Sleep(2000);
+	Sleep(500);
 	if (m2connected)
 	{
 		Communications::PortM2->Write("G\n");

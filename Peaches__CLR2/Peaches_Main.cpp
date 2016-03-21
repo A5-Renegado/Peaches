@@ -10,7 +10,7 @@ MotorManager * MotorManager3 = new MotorManager(0, 0, 1.0, m3connected);
 
 bool check_at_deposit()
 {
-	return abs(MotorManager1->get_current_angle() - theta1deposit) <= 50 && abs(MotorManager2->get_current_angle() - theta2deposit) <= 50 && abs(MotorManager3->get_current_angle() - theta3deposit) <= 50;
+	return abs((MotorManager1->get_current_angle() - theta1deposit) <= 500 || !m1connected) && (abs(MotorManager2->get_current_angle() - theta2deposit) <= 500 || !m2connected) && (abs(MotorManager3->get_current_angle() - theta3deposit) <= 500 || !m3connected);
 }
 
 int Peaches_Main::execute(array<System::String ^> ^ argv)
@@ -134,9 +134,10 @@ void draw()
 	
 	//
 	//test_Comms->setOpen(globalfVMS->getgo());
-	test_Comms->setPsensors(globalfVMS->getSensor() >= 400);
+	//test_Comms->setPsensors(globalfVMS->getSensor() >= 400);
 	test_Comms->setAtDeposit(check_at_deposit());
 
+	test_Comms->setAtPeach(MotorManager1->at_target() && MotorManager2->at_target() && MotorManager3->at_target());
 	MotorManager1->update_current(globalfVMS->getandclearm1());
 	MotorManager2->update_current(globalfVMS->getandclearm2());
 	MotorManager3->apply_absolute_offset(((float)MotorManager2->get_target())/50.0);
@@ -144,13 +145,11 @@ void draw()
 	test_Comms->setTargetAngles(image_processing->position);
 	MotorManager1->set_target_rotation(test_Comms->gett1());
 	MotorManager2->set_target_value(test_Comms->gett2(), 1);
-	std::cout << "Current Encoder Count: " << MotorManager2->get_current() << std::endl;
-	std::cout << "Sending move count to motor 2: " << MotorManager2->get_move_count() << std::endl;
 	MotorManager3->set_target_value(test_Comms->gett3(), 1);
 	test_Comms->setThereisapeach(image_processing->thereisapeach);
 	test_Comms->setBadCoords(image_processing->position->getZ() <= 100);
 
-	test_Comms->setAtPeach(MotorManager1->at_target() && MotorManager2->at_target() && MotorManager3->at_target());
+	//test_Comms->setAtPeach(MotorManager1->at_target() && MotorManager2->at_target() && MotorManager3->at_target());
 
 	//Need to set all values before this!
 	test_Comms->sendCommands();

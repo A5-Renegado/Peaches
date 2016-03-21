@@ -1,4 +1,4 @@
-﻿Build started 2016-03-21 2:46:52 AM.
+﻿Build started 2016-03-21 11:33:56 AM.
      1>Project "C:\Users\Ian\Documents\Visual Studio 2015\Projects\FYDP\Peaches_CLR3\Peaches__CLR2\Peaches__CLR2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft SDKs\Kinect\v1.8\\inc" /IC:\OpenCV\build\include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Peaches__CLR2.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
@@ -10,11 +10,11 @@
      1>c:\users\ian\documents\visual studio 2015\projects\fydp\peaches_clr3\peaches__clr2\Communications.h(6): warning C4305: 'initializing': truncation from 'double' to 'float'
      1>Communications.cpp(39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
      1>Communications.cpp(70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-     1>Communications.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-     1>Communications.cpp(274): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>Communications.cpp(275): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>Communications.cpp(276): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-     1>Communications.cpp(277): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>Communications.cpp(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>Communications.cpp(277): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>Communications.cpp(278): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>Communications.cpp(279): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>Communications.cpp(280): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
          DataStruct.cpp
          Kinect_ImProc.cpp
      1>Kinect_ImProc.cpp(89): warning C4800: 'INuiSensor *': forcing value to bool 'true' or 'false' (performance warning)
@@ -29,10 +29,10 @@
      1>c:\users\ian\documents\visual studio 2015\projects\fydp\peaches_clr3\peaches__clr2\Communications.h(6): warning C4305: 'initializing': truncation from 'double' to 'float'
      1>Peaches_Main.cpp(25): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\string.h(552): note: see declaration of 'strdup'
-     1>Peaches_Main.cpp(140): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
      1>Peaches_Main.cpp(141): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-     1>Peaches_Main.cpp(142): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-     1>Peaches_Main.cpp(143): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+     1>Peaches_Main.cpp(142): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+     1>Peaches_Main.cpp(143): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>Peaches_Main.cpp(144): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
          Peaches__CLR2.cpp
      1>c:\users\ian\documents\visual studio 2015\projects\fydp\peaches_clr3\peaches__clr2\Communications.h(5): warning C4305: 'initializing': truncation from 'double' to 'float'
      1>c:\users\ian\documents\visual studio 2015\projects\fydp\peaches_clr3\peaches__clr2\Communications.h(6): warning C4305: 'initializing': truncation from 'double' to 'float'
@@ -63,7 +63,7 @@
          LINK : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
          
          Invoking LINK.EXE:
-          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp9a507ea439424c4d99cabfb5e6e349b1.rsp
+          /ERRORREPORT:PROMPT @C:\Users\Ian\AppData\Local\Temp\tmp42d8e2094b85425eab319d1540ef0780.rsp
           /incremental:no
           /nologo
           /fullbuild
@@ -515,6 +515,7 @@
          Search transition ?sqrt@@$$J0YANN@Z->_sqrt
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@N@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@N@Z
          Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@H@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z
+         Search transition ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@$$FQAEAAV01@M@Z->??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@M@Z
          Search transition ?_errno@@$$J0YAPAHXZ->__errno
          Search transition ?strtof@@$$J0YAMPBDPAPAD@Z->_strtof
          Search transition ?_Xinvalid_argument@std@@$$FYAXPBD@Z->?_Xinvalid_argument@std@@YAXPBD@Z
@@ -784,6 +785,8 @@
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
+               Found "public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(float)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@M@Z)
+                 Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "void __cdecl std::_Xinvalid_argument(char const *)" (?_Xinvalid_argument@std@@YAXPBD@Z)
                  Loaded msvcprtd.lib(MSVCP140D.dll)
                Found "public: class std::locale __thiscall std::ios_base::getloc(void)const " (?getloc@ios_base@std@@QBE?AVlocale@2@XZ)
@@ -977,27 +980,27 @@
           /v
           /x
           /fo
-          "C:\Users\Ian\AppData\Local\Temp\lnk{3FB599B6-41E4-4E21-99B1-686C01394BDC}.tmp"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{3E57FD9B-9D41-4DB5-8D34-AF6DF056830E}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{C211D64C-6B68-49B4-8370-BC0CB31EDBBC}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{BA146707-92A8-4BA6-BDA3-D43686659196}.tmp"
          Microsoft (R) Windows (R) Resource Compiler Version 6.3.9600.17336
          
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
          
-         Creating C:\Users\Ian\AppData\Local\Temp\lnk{3FB599B6-41E4-4E21-99B1-686C01394BDC}.tmp
+         Creating C:\Users\Ian\AppData\Local\Temp\lnk{C211D64C-6B68-49B4-8370-BC0CB31EDBBC}.tmp
          
          Using codepage 1252 as default
          
-         C:\Users\Ian\AppData\Local\Temp\lnk{3E57FD9B-9D41-4DB5-8D34-AF6DF056830E}.tmp.
+         C:\Users\Ian\AppData\Local\Temp\lnk{BA146707-92A8-4BA6-BDA3-D43686659196}.tmp.
          Writing 24:1,	lang:0x409,	size 381
          
          Invoking cvtres.exe:
           /machine:x86
           /verbose
-          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{97086D3D-FB5B-41B4-9285-83854800E5F8}.tmp"
+          /out:"C:\Users\Ian\AppData\Local\Temp\lnk{9692A3FE-1902-4902-8BAB-77FFD00BA7C6}.tmp"
           /readonly
           "Debug\app.res"
-          "C:\Users\Ian\AppData\Local\Temp\lnk{3FB599B6-41E4-4E21-99B1-686C01394BDC}.tmp"
+          "C:\Users\Ian\AppData\Local\Temp\lnk{C211D64C-6B68-49B4-8370-BC0CB31EDBBC}.tmp"
          Microsoft (R) Windows Resource To Object Converter Version 14.00.23026.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
@@ -1155,6 +1158,7 @@
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
               msvcprtd.lib(MSVCP140D.dll)
+              msvcprtd.lib(MSVCP140D.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
               kernel32.lib(KERNEL32.dll)
@@ -1230,4 +1234,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.22
+Time Elapsed 00:00:05.37
