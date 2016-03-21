@@ -34,6 +34,7 @@ public:
 	static bool initiated;
 	void sendCommands() { doActions(); }
 	void endComms();
+	static bool last_moving;
 private:
 	void doActions();
 	static void DataReceivedHandler1(Object^ sender, System::IO::Ports::SerialDataReceivedEventArgs^ e);

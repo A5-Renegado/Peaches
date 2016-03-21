@@ -30,6 +30,12 @@ public:
 	void setm3c(float x);
 	void setgo(bool x);
 	void setSensor(int x);
+	void sett1(int x);
+	void sett2(int x);
+	void sett3(int x);
+	int gett1();
+	int gett2();
+	int gett3();
 
 private:
 	bool motor1moving;
@@ -44,6 +50,9 @@ private:
 	int motor3count;
 	int forceSensorInput;
 	bool inuse;
+	int target1;
+	int target2;
+	int target3;
 };
 
 ref class lockRef {

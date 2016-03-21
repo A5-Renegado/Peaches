@@ -1,36 +1,44 @@
 #include "stdafx.h"
 #include "MotorManager.h"
 
-MotorManager::MotorManager(int start_count)
+MotorManager::MotorManager(int start_count, bool use)
 {
 	current_count = start_count;
 	gear_ratio = 1;
 	offset_per_degree = 0;
 	target_value = 0;
+	count_offset = 0;
+	inuse = use;
 }
 
-MotorManager::MotorManager(int start_count, float agear_ratio)
+MotorManager::MotorManager(int start_count, float agear_ratio, bool use)
 {
 	current_count = start_count;
 	gear_ratio = agear_ratio;
 	offset_per_degree = 0;
 	target_value = 0;
+	count_offset = 0;
+	inuse = use;
 }
 
-MotorManager::MotorManager(int start_count, int aoffset_per_degree)
+MotorManager::MotorManager(int start_count, int aoffset_per_degree, bool use)
 {
 	current_count = start_count;
 	gear_ratio = 1;
 	offset_per_degree = aoffset_per_degree;
 	target_value = 0;
+	count_offset = 0;
+	inuse = use;
 }
 
-MotorManager::MotorManager(int start_count, int aoffset_per_degree, float agear_ratio)
+MotorManager::MotorManager(int start_count, int aoffset_per_degree, float agear_ratio, bool use)
 {
 	current_count = start_count;
 	gear_ratio = agear_ratio;
 	offset_per_degree = aoffset_per_degree;
 	target_value = 0;
+	count_offset = 0;
+	inuse = use;
 }
 
 bool MotorManager::get_direction()
@@ -60,8 +68,11 @@ bool MotorManager::Keep_Running(int input_angle)
 	{
 		return false;
 	}
-	
+}
 
+void MotorManager::apply_absolute_offset(float abs_angle)
+{
+	count_offset = abs_angle * offset_per_degree;
 }
 
 void MotorManager::set_target_value(float input_angle, int set_direction)

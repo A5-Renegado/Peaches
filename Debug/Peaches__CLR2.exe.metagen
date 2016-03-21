@@ -21,6 +21,7 @@ Class Communications: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.IO.Ports.SerialPort PortP1 : Public, Static
     System.Object m_lock : Public, Static
     Boolean initiated : Public, Static
+    Boolean last_moving : Public, Static
   Methods:
     getMoving(): PrivateScope, Public, HideBySig
     setMoving(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig

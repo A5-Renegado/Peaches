@@ -4,9 +4,9 @@
 //Create image processing instance
 Kinect_ImProc *image_processing = new Kinect_ImProc(true);
 DataStruct * globalfVMS = new DataStruct();
-MotorManager * MotorManager1 = new MotorManager(0, 0, 1.0);
-MotorManager * MotorManager2 = new MotorManager(0, 0, 1.0);
-MotorManager * MotorManager3 = new MotorManager(0, 0, 1.0);
+MotorManager * MotorManager1 = new MotorManager(0, 0, 1.0, m1connected);
+MotorManager * MotorManager2 = new MotorManager(0, 0, 1.0, m2connected);
+MotorManager * MotorManager3 = new MotorManager(0, 0, 1.0, m3connected);
 
 bool check_at_deposit()
 {
@@ -123,20 +123,29 @@ void draw()
 	Communications^ test_Comms = gcnew Communications(true);
 	
 	test_Comms->setMoving(globalfVMS->getm1m() || globalfVMS->getm2m() || globalfVMS->getm3m());
+	/*if (!test_Comms->getMoving())
+	{
+		MotorManager1->setcurrent_target();
+		MotorManager2->setcurrent_target();
+		MotorManager3->setcurrent_target();
+	}*/
+
+	//test_Comms->setMoving(globalfVMS->getm1m() || globalfVMS->getm2m() || globalfVMS->getm3m());
 	
-	test_Comms->setOpen(globalfVMS->getgo());
+	//
+	//test_Comms->setOpen(globalfVMS->getgo());
 	test_Comms->setPsensors(globalfVMS->getSensor() >= 400);
 	test_Comms->setAtDeposit(check_at_deposit());
 
 	MotorManager1->update_current(globalfVMS->getandclearm1());
 	MotorManager2->update_current(globalfVMS->getandclearm2());
-	MotorManager3->apply_offset(((float)MotorManager2->get_move_count())/50.0);
+	MotorManager3->apply_absolute_offset(((float)MotorManager2->get_target())/50.0);
 	MotorManager3->update_current(globalfVMS->getandclearm3());
 	test_Comms->setTargetAngles(image_processing->position);
 	MotorManager1->set_target_rotation(test_Comms->gett1());
+	MotorManager2->set_target_value(test_Comms->gett2(), 1);
 	std::cout << "Current Encoder Count: " << MotorManager2->get_current() << std::endl;
 	std::cout << "Sending move count to motor 2: " << MotorManager2->get_move_count() << std::endl;
-	MotorManager2->set_target_value(test_Comms->gett2(), 1);
 	MotorManager3->set_target_value(test_Comms->gett3(), 1);
 	test_Comms->setThereisapeach(image_processing->thereisapeach);
 	test_Comms->setBadCoords(image_processing->position->getZ() <= 100);

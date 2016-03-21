@@ -13,6 +13,9 @@ DataStruct::DataStruct()
 	motor1change = 0;
 	motor2change = 0;
 	motor3change = 0;
+	target1 = 0;
+	target2 = 0;
+	target3 = 0;
 	inuse = false;
 }
 
@@ -299,4 +302,70 @@ float DataStruct::getandclearm3()
 	motor3change = 0;
 	inuse = false;
 	return temp;
+}
+
+int DataStruct::gett1()
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	return target1;
+}
+
+int DataStruct::gett2()
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	return target2;
+}
+
+int DataStruct::gett3()
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	return target3;
+}
+
+void DataStruct::sett1(int x)
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
+	target1 = x;
+	inuse = false;
+}
+
+void DataStruct::sett2(int x)
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
+	target2 = x;
+	inuse = false;
+}
+
+void DataStruct::sett3(int x)
+{
+	lockRef^ m_lock = gcnew lockRef();
+	msclr::lock l(m_lock);
+	while (inuse)
+	{
+	}
+	inuse = true;
+	target3 = x;
+	inuse = false;
 }
